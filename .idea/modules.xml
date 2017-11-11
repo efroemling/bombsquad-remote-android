@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BSRemote/BSRemote.iml" filepath="$PROJECT_DIR$/BSRemote/BSRemote.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Desktop-bombsquad-remote-android.iml" filepath="$PROJECT_DIR$/Desktop-bombsquad-remote-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/bombsquad-remote-android.iml" filepath="$PROJECT_DIR$/bombsquad-remote-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/BSRemote/bombsquad-remote-android-BSRemote.iml" filepath="$PROJECT_DIR$/BSRemote/bombsquad-remote-android-BSRemote.iml" />
     </modules>
   </component>
 </project>
