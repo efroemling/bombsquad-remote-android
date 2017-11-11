@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ДУ BombSquad</string>
+    <string name="app_name_short">ДУBS</string>
+    <string name="item_network_title">Ищем игры BombSquad...</string>
+    <string name="item_network_caption">Нажмите на название игры для входа.\nУбедитесь, что вы находитесь в той же сети, что и игра.</string>
+    <string name="dPadSize">Размер D-Pad</string>
+    <string name="buttonSize">Размер кнопки</string>
+    <string name="dPadPosition">Расположение D-Pad</string>
+    <string name="buttonPosition">Положение кнопки</string>
+    <string name="dPadType">Тип D-Pad</string>
+    <string name="floating">плавающий</string>
+    <string name="fixed">неподвижный</string>
+    <string name="configHardwareButtons">Аппаратные кнопки</string>
+    <string name="playerName">Имя игрока</string>
+    <string name="settings">Настройки</string>
+    <string name="bomb">Бомба</string>
+    <string name="jump">Прыгнуть</string>
+    <string name="punch">Ударить</string>
+    <string name="pickUp">Поднять</string>
+    <string name="run1">Бег 1</string>
+    <string name="run2">Бег 2</string>
+    <string name="start">Старт</string>
+    <string name="pressAnyKeyButton">Нажмите любую кнопку</string>
+    <string name="capturing">Слушаю...</string>
+    <string name="resetToDefault">Сброс</string>
+    <string name="enterAddress">Введите адрес</string>
+    <string name="connect">Подключиться</string>
+    <string name="cancel">Отмена</string>
+    <string name="joinByAddress">Присоединиться по адресу...</string>
+    <string name="connected">Соединено.</string>
+    <string name="connecting">Идет соединение...</string>
+    <string name="lag">Лаг: ${SECONDS} секунд</string>
+    <string name="cantResolveHost">Сервер не найден.</string>
+    <string name="disconnected">Выброшен сервером.</string>
+    <string name="gameFull">Комната заполнена или соединения не принимаются.</string>
+    <string name="versionMismatch">Несовпадение версий.\nУбедитесь, что BombSquad и контроллер BombSquad\nобновлены до последней версии и повторите попытку.</string>
+    <string name="gameShutDown">Сервер отключился.</string>
+</resources>

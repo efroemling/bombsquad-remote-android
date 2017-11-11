@@ -1,0 +1,9 @@
+<resources>
+    
+    <style name="AppBaseTheme" parent="android:Theme.DeviceDefault.NoActionBar.Fullscreen">
+    </style>
+
+    <style name="AppJoinTheme" parent="android:Theme.DeviceDefault">
+    </style>
+    
+</resources>

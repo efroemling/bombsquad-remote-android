@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="item_network_title">Traženje BombSquad igri...</string>
+    <string name="playerName">Ime Igrača</string>
+    <string name="settings">Postavke</string>
+    <string name="bomb">Bomba</string>
+    <string name="jump">Skok</string>
+    <string name="punch">Udarac</string>
+    <string name="pickUp">Podigni</string>
+    <string name="start">Počni</string>
+    <string name="pressAnyKeyButton">Pririsni bilo koju tipku...</string>
+    <string name="resetToDefault">Resetirano na standardno</string>
+    <string name="enterAddress">Ubaci Andresu</string>
+    <string name="connect">Spoji se</string>
+    <string name="cancel">Odustani</string>
+    <string name="connecting">Povezujem se...</string>
+    <string name="gameShutDown">Igra se ugasila.</string>
+</resources>

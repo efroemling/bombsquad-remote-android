@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+    TunesRemote+ - http://code.google.com/p/tunesremote-plus/
+    
+    Copyright (C) 2008 Jeffrey Sharkey, http://jsharkey.org/
+    Copyright (C) 2010 TunesRemote+, http://code.google.com/p/tunesremote-plus/
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+    
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+    
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+    
+    The Initial Developer of the Original Code is Jeffrey Sharkey.
+    Portions created by Jeffrey Sharkey are
+    Copyright (C) 2008. Jeffrey Sharkey, http://jsharkey.org/
+    All Rights Reserved.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/playerName"
+            android:id="@+id/textView"
+            android:layout_marginRight="10dp" />
+
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameEditText"
+			android:singleLine="true" />
+
+	</LinearLayout>
+
+	<RelativeLayout
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:padding="10dip"
+	android:orientation="horizontal"
+	android:gravity="center_vertical"
+	>
+
+	<ProgressBar
+	    android:id="@+id/progress"
+	    style="?android:attr/progressBarStyleSmall"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:minHeight="26dip"
+	    android:minWidth="26dip"
+	    android:paddingRight="10dip" />
+
+	<TextView
+	    android:id="@android:id/text1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@id/progress"
+	    android:text="@string/item_network_title"
+	    android:textAlignment="center"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+	<TextView
+	    android:id="@android:id/text2"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@android:id/text1"
+	    android:layout_toRightOf="@id/progress"
+	    android:text="@string/item_network_caption"
+	    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+</RelativeLayout>
+
+</LinearLayout>

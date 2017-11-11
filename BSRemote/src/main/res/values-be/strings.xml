@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">Пошук гульняў BombSquad...</string>
+    <string name="item_network_caption">Націсніце на імя гульні, каб падлучыцца.\nПераканайцеся, што вы падлучаны да адной WiFi сеткі.</string>
+    <string name="dPadSize">Памер D-Pad</string>
+    <string name="buttonSize">Памер Кнопак</string>
+    <string name="dPadPosition">Месцазнаходжанне D-Pad</string>
+    <string name="buttonPosition">Месцазнаходжанне Кнопак</string>
+    <string name="dPadType">Тып D-Pad</string>
+    <string name="floating">незафіксаваны</string>
+    <string name="fixed">фіксаваны</string>
+    <string name="configHardwareButtons">Сістэмныя Кнопкі</string>
+    <string name="playerName">Імя Гульца</string>
+    <string name="settings">Налады</string>
+    <string name="bomb">Бомба</string>
+    <string name="jump">Прыгайце</string>
+    <string name="punch">Ударыць</string>
+    <string name="pickUp">Падняць</string>
+    <string name="run1">Бег 1</string>
+    <string name="run2">Бег 2</string>
+    <string name="start">Пачаць</string>
+    <string name="pressAnyKeyButton">Націсніце любую кнопку...</string>
+    <string name="capturing">Чаканне...</string>
+    <string name="resetToDefault">Аднавіць Налады</string>
+    <string name="enterAddress">Увесці Адрас</string>
+    <string name="connect">Далучыцца</string>
+    <string name="cancel">Зачыніць</string>
+    <string name="joinByAddress">Падлучыцца па Адрасе...</string>
+    <string name="connected">Злучана.</string>
+    <string name="connecting">Падключэнне...</string>
+    <string name="lag">Лаг: ${SECONDS} сек</string>
+    <string name="cantResolveHost">Хост не знойдзены.</string>
+    <string name="disconnected">Адключаны серверам.</string>
+    <string name="gameFull">Гульня не адказвае.</string>
+    <string name="versionMismatch">Старая версія.\nПераканайцеся, што вы маеце апошнія версіі\nBombSquad і BombSquad Remote.</string>
+    <string name="gameShutDown">Гульня адключана.</string>
+</resources>

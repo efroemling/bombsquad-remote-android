@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">Szukanie gier BombSquad...</string>
+    <string name="item_network_caption">Kliknij na nazwę gry by do niej dołączyć.\nUpewnij się, że jesteś w tej samej sieci Wi-Fi, co gra.</string>
+    <string name="dPadSize">Wielkość Joysticka</string>
+    <string name="buttonSize">Wielkość Przycisku</string>
+    <string name="dPadPosition">Pozycja Joysticka</string>
+    <string name="buttonPosition">Pozycja Przycisku</string>
+    <string name="dPadType">Rodzaj Joysticka</string>
+    <string name="floating">ruchomy</string>
+    <string name="fixed">nieruchomy</string>
+    <string name="configHardwareButtons">Przyciski Sprzętu Komputerowego</string>
+    <string name="playerName">Nazwa gracza</string>
+    <string name="settings">Ustawienia</string>
+    <string name="bomb">Bomba</string>
+    <string name="jump">Skok</string>
+    <string name="punch">Cios</string>
+    <string name="pickUp">Podnieś</string>
+    <string name="run1">Run 1</string>
+    <string name="run2">Run 2</string>
+    <string name="start">Start</string>
+    <string name="pressAnyKeyButton">Naciśnij dowolny przycisk...</string>
+    <string name="capturing">Przechwytywanie...</string>
+    <string name="resetToDefault">Resetuj do domyślnych</string>
+    <string name="enterAddress">Wpisz adres</string>
+    <string name="connect">Połącz</string>
+    <string name="cancel">Anuluj</string>
+    <string name="joinByAddress">Wejdź przez adres...</string>
+    <string name="connected">Połączony.</string>
+    <string name="connecting">Łączenie...</string>
+    <string name="lag">Lag (opóźnienie): ${SECONDS} sekund</string>
+    <string name="cantResolveHost">Nie można zanalizować hosta.</string>
+    <string name="disconnected">Rozłączono przez serwer.</string>
+    <string name="gameFull">Gra jest pełna lub nie akceptuje połączeń.</string>
+    <string name="versionMismatch">Wersje nie pasują.\nSprawdź czy BombSquad i BombSquad Remote\nmają najnowszą wersję i spróbuj ponownie.</string>
+    <string name="gameShutDown">Gra została zamknięta.</string>
+</resources>

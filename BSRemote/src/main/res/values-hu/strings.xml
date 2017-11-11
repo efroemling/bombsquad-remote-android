@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Irányító</string>
+    <string name="app_name_short">BsIrányító</string>
+    <string name="item_network_title">Keresés BombSquad játékra...</string>
+    <string name="item_network_caption">Nyomj annak a játéknak a nevére amelynez csatlakozni akarsz.\nLegyél biztos abba hogy ugyan azon a wifi hálozaton van a játék.</string>
+    <string name="dPadSize">D-pad Mérete</string>
+    <string name="buttonSize">Gomb mérete</string>
+    <string name="dPadPosition">D-Pad Helye</string>
+    <string name="buttonPosition">Gomb helye</string>
+    <string name="dPadType">D-Pad Típusa</string>
+    <string name="floating">repülés</string>
+    <string name="fixed">megoldva</string>
+    <string name="configHardwareButtons">Hardver Gombok.</string>
+    <string name="playerName">Játékos Név</string>
+    <string name="settings">Beállítások</string>
+    <string name="bomb">Bomba</string>
+    <string name="jump">Ugorj</string>
+    <string name="punch">Ütés</string>
+    <string name="pickUp">Felvétel</string>
+    <string name="run1">1 Futtatása</string>
+    <string name="run2">2 Futtatása</string>
+    <string name="start">Kezdés</string>
+    <string name="pressAnyKeyButton">Nyomj meg egy gombot...</string>
+    <string name="capturing">Foglalás...</string>
+    <string name="resetToDefault">Visszaállítás alap értelmezettre.</string>
+    <string name="enterAddress">Belépés címről.</string>
+    <string name="connect">Csatlakozás</string>
+    <string name="cancel">Mégse</string>
+    <string name="joinByAddress">Cím alapján való csatlakozás...</string>
+    <string name="connected">Kapcsolódva.</string>
+    <string name="connecting">Csatlakozás...</string>
+    <string name="lag">Lagg: ${SECONDS} másodpercig.</string>
+    <string name="cantResolveHost">Nem elemezhető hálózat.</string>
+    <string name="disconnected">Lecsatlakozva a szerver miatt.</string>
+    <string name="gameFull">Ez a játék tele van vagy nem fogad kapcsolatokat.</string>
+    <string name="versionMismatch">Verzió hiba.\nLégy biztos abban hogy a BombSqad Irányító\na legújabb verzióval rendelkezik, és próbáld újra.</string>
+    <string name="gameShutDown">Ez a játék leállt.</string>
+</resources>

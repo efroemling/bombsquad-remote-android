@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">Searching for BombSquad games…</string>
+    <string name="item_network_caption">Tap on the name of a game to join it.\nMake sure you are on the same wifi network as the game.</string>
+    <string name="dPadSize">D-Pad Size</string>
+    <string name="buttonSize">Button Size</string>
+    <string name="dPadPosition">D-Pad Position</string>
+    <string name="buttonPosition">Button Position</string>
+    <string name="dPadType">D-Pad Type</string>
+    <string name="floating">floating</string>
+    <string name="fixed">fixed</string>
+    <string name="configHardwareButtons">Hardware Buttons</string>
+    <string name="playerName">Player Name</string>
+    <string name="settings">Settings</string>
+    <string name="bomb">Bomb</string>
+    <string name="jump">Jump</string>
+    <string name="punch">Punch</string>
+    <string name="pickUp">Pick Up</string>
+    <string name="run1">Run 1</string>
+    <string name="run2">Run 2</string>
+    <string name="start">Start</string>
+    <string name="pressAnyKeyButton">Press any button...</string>
+    <string name="capturing">Capturing…</string>
+    <string name="resetToDefault">Reset to default</string>
+    <string name="enterAddress">Enter an Address</string>
+    <string name="connect">Connect</string>
+    <string name="cancel">Cancel</string>
+    <string name="joinByAddress">Join by Address…</string>
+    <string name="connected">Connected.</string>
+    <string name="connecting">Connecting...</string>
+    <string name="lag">Lag: ${SECONDS} seconds</string>
+    <string name="cantResolveHost">Can\'t resolve host.</string>
+    <string name="disconnected">Disconnected by server.</string>
+    <string name="gameFull">The game is full or not accepting connections.</string>
+    <string name="versionMismatch">Version mismatch.\nMake sure BombSquad and BombSquad Remote\nare the latest versions and try again.</string>
+    <string name="gameShutDown">The game has shut down.</string>
+</resources>

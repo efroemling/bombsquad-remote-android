@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Afstandsbediening</string>
+    <string name="app_name_short">BSAfstandsbediening</string>
+    <string name="item_network_title">Zoeken naar BombSquad spellen...</string>
+    <string name="item_network_caption">Tik op de naam van het spel om mee te doen.\nZorg er voor dat u op het zelfde wifi netwerk bent als het spel.</string>
+    <string name="dPadSize">D-Pad Grootte</string>
+    <string name="buttonSize">Knop Grootte</string>
+    <string name="dPadPosition">D-Pad Positie</string>
+    <string name="buttonPosition">Knop Positie</string>
+    <string name="dPadType">D-Pad Type</string>
+    <string name="floating">zwevend</string>
+    <string name="fixed">vast</string>
+    <string name="configHardwareButtons">Hardware Knoppen</string>
+    <string name="playerName">Speler Naam</string>
+    <string name="settings">Instellingen</string>
+    <string name="bomb">Bom</string>
+    <string name="jump">Spring</string>
+    <string name="punch">Slaan</string>
+    <string name="pickUp">Pak Op</string>
+    <string name="run1">Rennen 1</string>
+    <string name="run2">Rennen 2</string>
+    <string name="start">Begin</string>
+    <string name="pressAnyKeyButton">Druk een knop...</string>
+    <string name="capturing">Vastleggen...</string>
+    <string name="resetToDefault">Herstel naar standaard</string>
+    <string name="enterAddress">Voer een Adres in</string>
+    <string name="connect">Verbind</string>
+    <string name="cancel">Annuleer</string>
+    <string name="joinByAddress">Meedoen met Adres...</string>
+    <string name="connected">Verbonden.</string>
+    <string name="connecting">Verbinden...</string>
+    <string name="lag">Lag: ${SECONDS} seconden</string>
+    <string name="cantResolveHost">Kan host niet oplossen.</string>
+    <string name="disconnected">Verbinding verbroken door server.</string>
+    <string name="gameFull">Dit spel is vol of accepteert geen nieuwe verbindingen.</string>
+    <string name="versionMismatch">Versie ongelijk.\nZorg er voor dat BombSquad en BombSquad Afstandsbediening\nde nieuwste versie zijn en probeer het opnieuw.</string>
+    <string name="gameShutDown">Het spel is afgesloten.</string>
+</resources>

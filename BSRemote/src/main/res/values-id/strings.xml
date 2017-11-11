@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Remot BombSquad</string>
+    <string name="app_name_short">BSRemot</string>
+    <string name="item_network_title">Mencari BombSquad...</string>
+    <string name="item_network_caption">Tekan nama dari game yang ingin dimasuki.\nPastikan kau berada di jaringan wifi yang sama dengan gamenya.</string>
+    <string name="dPadSize">Ukuran D-Pad</string>
+    <string name="buttonSize">Ukuran Tombol</string>
+    <string name="dPadPosition">Posisi D-Pad</string>
+    <string name="buttonPosition">Posisi Tombol</string>
+    <string name="dPadType">Tipe D-Pad</string>
+    <string name="floating">mengambang</string>
+    <string name="fixed">tetap</string>
+    <string name="configHardwareButtons">Tombol Perangkat keras</string>
+    <string name="playerName">Nama Pemain</string>
+    <string name="settings">Pengaturan</string>
+    <string name="bomb">Bom</string>
+    <string name="jump">Lompat</string>
+    <string name="punch">Pukul</string>
+    <string name="pickUp">Ambil</string>
+    <string name="run1">Lari 1</string>
+    <string name="run2">Lari 2</string>
+    <string name="start">Mulai</string>
+    <string name="pressAnyKeyButton">Tekan tombol</string>
+    <string name="capturing">Menangkap…</string>
+    <string name="resetToDefault">Ubah ke awal</string>
+    <string name="enterAddress">Masukkan Alamat</string>
+    <string name="connect">Hubungkan</string>
+    <string name="cancel">Batal</string>
+    <string name="joinByAddress">Masuk pakai Alamat...</string>
+    <string name="connected">Terhubung.</string>
+    <string name="connecting">Menyambung...</string>
+    <string name="lag">Lag: ${SECONDS} detik</string>
+    <string name="cantResolveHost">Tidak bisa menemukan pembuat.</string>
+    <string name="disconnected">Diputus server</string>
+    <string name="gameFull">Game sudah penuh atau tidak menerima koneksi.</string>
+    <string name="versionMismatch">Versi tidak sama.\nPastikan BombSquad dan Remot BombSquad\nadalah versi terbaru dan coba lagi.</string>
+    <string name="gameShutDown">Game sudah mati</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Ovladač</string>
+    <string name="app_name_short">BSOvladač</string>
+    <string name="item_network_title">Probíhá hledání aktivních her BombSquad...</string>
+    <string name="item_network_caption">Pro připojení se dotkněte jména hry.\nUjistěte se, že jste na stejné síti wifi.</string>
+    <string name="dPadSize">Velikost D-Pad</string>
+    <string name="buttonSize">Velikost tlačítek</string>
+    <string name="dPadPosition">Pozice D-Pad</string>
+    <string name="buttonPosition">Pozice tlačítek</string>
+    <string name="dPadType">Typ D-Pad</string>
+    <string name="floating">plovoucí</string>
+    <string name="fixed">statický</string>
+    <string name="configHardwareButtons">Hardwarová tlačítka</string>
+    <string name="playerName">Přezdívka</string>
+    <string name="settings">Nastavení</string>
+    <string name="bomb">Bomba</string>
+    <string name="jump">Skok</string>
+    <string name="punch">Praštit</string>
+    <string name="pickUp">Zvednout</string>
+    <string name="run1">Běh 1</string>
+    <string name="run2">Běh 2</string>
+    <string name="start">Start</string>
+    <string name="pressAnyKeyButton">Stiskněte libovolné tlačítko...</string>
+    <string name="capturing">Zachytávám...</string>
+    <string name="resetToDefault">Navrátit základní</string>
+    <string name="enterAddress">Zadejte adresu</string>
+    <string name="connect">Připojit</string>
+    <string name="cancel">Zrušit</string>
+    <string name="joinByAddress">Připojit se k adrese...</string>
+    <string name="connected">Připojen.</string>
+    <string name="connecting">Připojuji...</string>
+    <string name="lag">Prodleva: ${SECONDS} sekund</string>
+    <string name="cantResolveHost">Hostitel nebyl nalezen.</string>
+    <string name="disconnected">Odpojen serverem.</string>
+    <string name="gameFull">Hra je již zaplněna hráči nebo nepřijímá připojení.</string>
+    <string name="versionMismatch">Neshoda verzí.\nUjistěte se, že BombSquad a BombSquad Ovladač\njsou aktualizované na poslední verzi, a zkuste to znovu.</string>
+    <string name="gameShutDown">Hra byla vypnuta.</string>
+</resources>

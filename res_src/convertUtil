@@ -1,0 +1,72 @@
+#!/usr/bin/env python
+
+import sys
+import os
+import subprocess
+
+def _run(cmd):
+    """ run a command, returning its stdout output """
+    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    results = p.communicate()[0]
+    if p.returncode != 0: raise Exception("command failed: "+cmd)
+    return results
+
+action = sys.argv[1]
+
+
+if action == 'convertImage':
+
+    if len(sys.argv) != 4: raise Exception("expected 3 args")
+    src = sys.argv[2]
+    dst = sys.argv[3]
+
+    if not dst.endswith('.png'): raise Exception("dst must be a png")
+
+    # eww sips seems to choke on our dst filename.. so just convert in place and move it
+    tmpName = os.path.basename(src)+'_tmpImgCnv.png'
+    try:
+        _run('sips -s format png '+src+' --out '+tmpName)
+        _run('mv '+tmpName+' '+dst)
+    except Exception:
+        _run('rm -f '+tmpName) # clean up
+        raise
+
+
+elif action == 'convertImageHalf':
+
+    if len(sys.argv) != 4: raise Exception("expected 3 args")
+    src = sys.argv[2]
+    dst = sys.argv[3]
+
+    if not dst.endswith('.png'): raise Exception("dst must be a png")
+
+    width = int(_run('sips -g pixelWidth '+src).split()[-1])
+    height = int(_run('sips -g pixelHeight '+src).split()[-1])
+    # eww sips seems to choke on our dst filename.. so just convert in place and move it
+    tmpName = os.path.basename(src)+'_tmpImgCnvHalf.png'
+    try:
+        _run('sips -s format png --resampleHeightWidth '+str(height//2)+' '+str(width//2)+' '+src+' --out '+tmpName)
+        _run('mv '+tmpName+' '+dst)
+    except Exception:
+        _run('rm -f '+tmpName) # clean up
+        raise
+
+    
+elif action == 'convertImageToSize':
+
+    if len(sys.argv) != 6: raise Exception("expected 5 args")
+    width = int(sys.argv[2])
+    height = int(sys.argv[3])
+    src = sys.argv[4]
+    dst = sys.argv[5]
+
+    if not dst.endswith('.png'): raise Exception("dst must be a png")
+    # eww sips seems to choke on our dst filename.. so just convert in place and move it
+    tmpName = os.path.basename(src)+'_tmpImgCnv'+str(width)+'x'+str(height)+'.png'
+    try:
+        _run('sips -s format png --resampleHeightWidth '+str(height)+' '+str(width)+' '+src+' --out '+tmpName)
+        _run('mv '+tmpName+' '+dst)
+    except Exception:
+        _run('rm -f '+tmpName) # clean up
+        raise
+

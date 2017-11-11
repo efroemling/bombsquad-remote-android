@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">BombSquad oyunları araştırılıyor...</string>
+    <string name="item_network_caption">Katılacağın oyunun adına tıkla.\nOyun ile aynı ağa bağlı olduğundan emin ol.</string>
+    <string name="dPadSize">D-Pad Boyutu</string>
+    <string name="buttonSize">Buton Boyutu</string>
+    <string name="dPadPosition">D-Pad Posizyonu</string>
+    <string name="buttonPosition">Buton Pozisyonu</string>
+    <string name="dPadType">D-Pad Tipi</string>
+    <string name="floating">Kaydırma</string>
+    <string name="fixed">Sabit</string>
+    <string name="configHardwareButtons">Fiziksel Butonlar</string>
+    <string name="playerName">Oyuncu Adı</string>
+    <string name="settings">Ayarlar</string>
+    <string name="bomb">Bomba</string>
+    <string name="jump">Zıpla</string>
+    <string name="punch">yumruk</string>
+    <string name="pickUp">Kaldır</string>
+    <string name="run1">Koş 1</string>
+    <string name="run2">Koş 2</string>
+    <string name="start">Başlat</string>
+    <string name="pressAnyKeyButton">Herhangi bir butona basın...</string>
+    <string name="capturing">Yakalanıyor...</string>
+    <string name="resetToDefault">Varsayılana Sıfırla</string>
+    <string name="enterAddress">Bir Adres Gir</string>
+    <string name="connect">Bağlan</string>
+    <string name="cancel">İptal</string>
+    <string name="joinByAddress">Adres ile Katıl...</string>
+    <string name="connected">Bağlanıldı.</string>
+    <string name="connecting">Bağlanılıyor...</string>
+    <string name="lag">Gecikme: ${SECONDS} saniye</string>
+    <string name="cantResolveHost">Sunucu Çözülemiyor.</string>
+    <string name="disconnected">Sunucu bağlantısı kesildi.</string>
+    <string name="gameFull">Bu oyun dolu veya bağlantıları kabul etmiyor.</string>
+    <string name="versionMismatch">Versiyon uyuşmuyor.\nBombSquad ve BombSquad Remote\'nin son \nsürüm olduğundan emin ol ve tekrar dene.</string>
+    <string name="gameShutDown">Oyun Kapalı</string>
+</resources>

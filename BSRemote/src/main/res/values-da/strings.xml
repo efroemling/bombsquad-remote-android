@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playerName">Spillernavn</string>
+    <string name="settings">Indstillinger</string>
+    <string name="bomb">Bomb</string>
+    <string name="jump">Hop</string>
+    <string name="punch">Slå</string>
+    <string name="pickUp">Saml op</string>
+    <string name="pressAnyKeyButton">Tryk på hvilken som helst knap...</string>
+    <string name="cancel">Annuller</string>
+</resources>

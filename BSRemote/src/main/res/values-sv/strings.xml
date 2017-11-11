@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="playerName">Spelarnamn</string>
+    <string name="settings">Inställningar</string>
+    <string name="bomb">Bomb</string>
+    <string name="jump">Hoppa</string>
+    <string name="punch">Slå</string>
+    <string name="pickUp">Hämta Upp</string>
+    <string name="pressAnyKeyButton">Tryck på valfri knapp...</string>
+    <string name="connect">Anslut</string>
+    <string name="cancel">Avbryt</string>
+    <string name="connecting">Ansluter...</string>
+</resources>

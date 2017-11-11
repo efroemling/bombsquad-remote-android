@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="230dp"
+    android:layout_margin="5dp">
+
+    <Button
+        android:id="@+id/buttonPickUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pickUp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/buttonBomb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bomb"
+        android:singleLine="false"
+        android:layout_below="@+id/buttonPickUp"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@+id/buttonPickUp"
+        android:layout_marginLeft="-20dp" />
+
+    <Button
+        android:id="@+id/buttonPunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/punch"
+        android:layout_below="@+id/buttonPickUp"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@+id/buttonPickUp"
+        android:layout_marginRight="-20dp" />
+
+    <Button
+        android:id="@+id/buttonJump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jump"
+        android:layout_alignLeft="@+id/buttonPickUp"
+        android:layout_below="@+id/buttonPunch"
+        android:layout_marginTop="5dp"
+        android:layout_alignRight="@+id/buttonPickUp" />
+
+    <TextView
+        android:id="@+id/textJump"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jump"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/buttonJump"
+        android:layout_alignLeft="@+id/buttonJump"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/textRun1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/run1"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignLeft="@+id/buttonRun1"
+        android:layout_below="@+id/buttonRun1"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/textBomb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bomb"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toRightOf="@+id/buttonBomb"
+        android:layout_alignBaseline="@+id/buttonBomb"
+        android:layout_marginLeft="5dp" />
+
+    <TextView
+        android:id="@+id/textRun2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/run2"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignRight="@+id/buttonRun2"
+        android:layout_below="@+id/buttonRun2"
+        android:layout_gravity="center"
+        android:layout_marginRight="10dp" />
+
+    <TextView
+        android:id="@+id/textPunch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/punch"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_toLeftOf="@+id/buttonPunch"
+        android:layout_alignBaseline="@+id/buttonPunch"
+        android:layout_marginRight="5dp" />
+
+    <Button
+        android:id="@+id/buttonRun1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/run1" />
+
+    <Button
+        android:id="@+id/buttonRun2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/run2"
+        android:layout_alignParentRight="true" />
+
+    <TextView
+        android:id="@+id/textPickUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pickUp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignLeft="@+id/buttonPickUp"
+        android:layout_alignBottom="@+id/buttonPickUp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:id="@+id/textStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_alignLeft="@+id/buttonStart"
+        android:layout_marginLeft="10dp"
+        android:layout_above="@+id/buttonStart" />
+
+    <Button
+        android:id="@+id/buttonStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

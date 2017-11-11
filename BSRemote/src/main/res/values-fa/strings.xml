@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad کنترولر مخصوص</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">جستجو برای بازی ها فعال</string>
+    <string name="item_network_caption">بر روی نام یک بازی برای پیوستن به آن ضربه بزنید.\nاطمینان حاصل کنید که شما در شبکه وای فای همان بازی هستید.</string>
+    <string name="dPadSize">D-Pad Size</string>
+    <string name="buttonSize">اندازه دکمه</string>
+    <string name="dPadPosition">D-Pad Position</string>
+    <string name="buttonPosition">مکان دکمه</string>
+    <string name="dPadType">D-Pad Type</string>
+    <string name="floating">floating</string>
+    <string name="fixed">ثابت</string>
+    <string name="configHardwareButtons">دکمه سخت افزاری</string>
+    <string name="playerName">نام بازیکن</string>
+    <string name="settings">تنظیمات</string>
+    <string name="bomb">بمب</string>
+    <string name="jump">پرش</string>
+    <string name="punch">مشت</string>
+    <string name="pickUp">بلند کردن</string>
+    <string name="run1">Run 1</string>
+    <string name="run2">Run 2</string>
+    <string name="start">شروع</string>
+    <string name="pressAnyKeyButton">یک دکمه ای را فشار بده</string>
+    <string name="capturing">گرفتن…</string>
+    <string name="resetToDefault">برگرداند به پیشفرض</string>
+    <string name="enterAddress">وارد کردن یه آدرس</string>
+    <string name="connect">وصل شدن</string>
+    <string name="cancel">لغو</string>
+    <string name="joinByAddress">پیوستن با آدرس</string>
+    <string name="connected">.متصل شد</string>
+    <string name="connecting">در حال اتصال</string>
+    <string name="lag">ثانیه ${SECONDS} : تاخیر</string>
+    <string name="cantResolveHost">Can\'t resolve host.</string>
+    <string name="disconnected">قطع اتصال از سرور</string>
+    <string name="gameFull">بازی تکمیل است یا اتصالات پذیرفته نشدند</string>
+    <string name="versionMismatch">عدم تطابق نسخه ها\nاطمینان حاصل کنید که بمب اسکوار و کنترولر\nبمب اسکواد آخرین ورژن باشن و دوباره امتحان کنید</string>
+    <string name="gameShutDown">بازی تعطیل شد</string>
+</resources>

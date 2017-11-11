@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">In cerca di partite...</string>
+    <string name="item_network_caption">Tocca il nome della partita per aggiungertici.\nAssicurati di utilizzare la stessa rete wifi della partita.</string>
+    <string name="dPadSize">Dimensione del D-Pad</string>
+    <string name="buttonSize">Dimensione del Tasto</string>
+    <string name="dPadPosition">Posizione del D-Pad</string>
+    <string name="buttonPosition">Posizione del Tasto</string>
+    <string name="dPadType">Modalità del D-Pad</string>
+    <string name="floating">Mobile</string>
+    <string name="fixed">Fisso</string>
+    <string name="configHardwareButtons">Tasto Hardware</string>
+    <string name="playerName">Nome del giocatore</string>
+    <string name="settings">Impostazioni</string>
+    <string name="bomb">Bomba</string>
+    <string name="jump">Salta</string>
+    <string name="punch">Pugno</string>
+    <string name="pickUp">Raccogli</string>
+    <string name="run1">Corsa 1</string>
+    <string name="run2">Corsa 2</string>
+    <string name="start">Start</string>
+    <string name="pressAnyKeyButton">Premi un pulsante qualsiasi...</string>
+    <string name="capturing">Attesa Giocatori...</string>
+    <string name="resetToDefault">Resetta</string>
+    <string name="enterAddress">Inserire un Indirizzo</string>
+    <string name="connect">Connettiti</string>
+    <string name="cancel">Annulla</string>
+    <string name="joinByAddress">Accedi per Indirizzo...</string>
+    <string name="connected">Connesso.</string>
+    <string name="connecting">Connessione in corso...</string>
+    <string name="lag">Lag: ${SECONDS} secondi</string>
+    <string name="cantResolveHost">Impossibile trovare l\'host.</string>
+    <string name="disconnected">Disconnesso dal Server.</string>
+    <string name="gameFull">Il gioco è al completo o non accetta connessioni.</string>
+    <string name="versionMismatch">Incompatibilità di versione.\nAssicurati che BombSquad e BombSquad Remote\nsiano alla stessa versione e riprova.</string>
+    <string name="gameShutDown">Il gioco si è spento.</string>
+</resources>

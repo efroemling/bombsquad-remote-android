@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">BombSquad 게임 검색 중...</string>
+    <string name="item_network_caption">게임의 이름을 눌러서 가입하세요.\n게임과 같은 Wi-Fi 네트워크에 연결되어 있는지 확인하세요.</string>
+    <string name="dPadSize">D-패드 크기</string>
+    <string name="buttonSize">버튼 크기</string>
+    <string name="dPadPosition">D-패드 위치</string>
+    <string name="buttonPosition">버튼 위치</string>
+    <string name="dPadType">D-패드 종류</string>
+    <string name="floating">변동</string>
+    <string name="fixed">고정</string>
+    <string name="configHardwareButtons">하드웨어 버튼</string>
+    <string name="playerName">플레이어 이름</string>
+    <string name="settings">설정</string>
+    <string name="bomb">폭탄</string>
+    <string name="jump">점프</string>
+    <string name="punch">펀치</string>
+    <string name="pickUp">줍기</string>
+    <string name="run1">달리기 1</string>
+    <string name="run2">달리기 2</string>
+    <string name="start">시작</string>
+    <string name="pressAnyKeyButton">아무 버튼이나 누르세요...</string>
+    <string name="capturing">캡처 중...</string>
+    <string name="resetToDefault">기본값으로 재설정</string>
+    <string name="enterAddress">주소 입력</string>
+    <string name="connect">연결</string>
+    <string name="cancel">취소</string>
+    <string name="joinByAddress">주소로 가입...</string>
+    <string name="connected">연결됨.</string>
+    <string name="connecting">연결 중...</string>
+    <string name="lag">랙: ${SECONDS}초</string>
+    <string name="cantResolveHost">호스트를 확인할 수 없습니다.</string>
+    <string name="disconnected">서버에서 연결이 끊겼습니다.</string>
+    <string name="gameFull">게임이 만원이거나 연결을 받지 않습니다.</string>
+    <string name="versionMismatch">버전이 일치하지 않습니다.\nBombSquad 및 BombSquad Remote가\n최신 버전인지 확인한 후 다시 시도하세요.</string>
+    <string name="gameShutDown">게임이 종료되었습니다.</string>
+</resources>
