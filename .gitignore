@@ -2,6 +2,8 @@
 .gradle
 .DS_Store
 
+.idea/
+
 # Built application files
 *.apk
 *.ap_
