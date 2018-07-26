@@ -3,7 +3,7 @@
     <string name="app_name">बोम्ब-स्क्वाड दूरस्थ</string>
     <string name="app_name_short">बी.एस दूरस्थ</string>
     <string name="item_network_title">बोम्ब-स्क्वाड के गेम को ढूँढा जा रहा है</string>
-    <string name="item_network_caption">जुड़ने के लिए किसी गेम के नाम को दबाएँ |\nये ध्यान रखे कि आप भी उसी नेटवर्क पे हों जिस पे गेम चल रहा है |</string>
+    <string name="item_network_caption">जुड़ने के लिए किसी गेम के नाम को दबाएँ | \nये ध्यान रखे कि आप भी उसी नेटवर्क पे हों जिस पे गेम चल रहा है |</string>
     <string name="dPadSize">हिलने के बटन का माप</string>
     <string name="buttonSize">बटन का माप</string>
     <string name="dPadPosition">हिलने के बटन कि जगह</string>
@@ -12,6 +12,7 @@
     <string name="floating">हिलता हुआ</string>
     <string name="fixed">स्थायी</string>
     <string name="configHardwareButtons">हार्डवेयर बटन</string>
+    <string name="playerName">खिलाड़ी का नाम</string>
     <string name="settings">सेटिंग</string>
     <string name="bomb">बम</string>
     <string name="jump">कूदें</string>
@@ -33,6 +34,6 @@
     <string name="cantResolveHost">मेज़बान से जुड़ नहीं पा रहे...</string>
     <string name="disconnected">परिसेवक से संपर्क टूट गया है</string>
     <string name="gameFull">यह गेम भरा हुआ है और संपर्क नहीं स्वीकार कर रहा है |</string>
-    <string name="versionMismatch">संस्करण मेल नहीं खा रहे हैं |\nयह सुनिश्चित कर लें कि बोम्ब-स्क्वाड गेम और रिमोट\nपर नवीनतम संस्करण है और पुनः प्रयास करें |</string>
+    <string name="versionMismatch">संस्करण मेल नहीं खा रहे हैं | \nयह सुनिश्चित कर लें कि बोम्ब-स्क्वाड गेम और \nरिमोट पर नवीनतम संस्करण है और पुनः प्रयास करें |</string>
     <string name="gameShutDown">गेम बंद हो गया है |</string>
 </resources>

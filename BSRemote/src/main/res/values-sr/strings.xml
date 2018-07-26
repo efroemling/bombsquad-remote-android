@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">Тражење BombSquad игара...</string>
+    <string name="item_network_caption">Притисни на име игре да се придружиш.\nБуди сигуран да си на истој Wi-Fi мрежи као и игра.</string>
+    <string name="dPadSize">Величина окидача</string>
+    <string name="buttonSize">Вечичина дугмета</string>
+    <string name="dPadPosition">Позиција окидача</string>
+    <string name="buttonPosition">Позиција дугмади</string>
+    <string name="dPadType">Тип окидача</string>
+    <string name="floating">покретно</string>
+    <string name="fixed">фиксирано</string>
+    <string name="configHardwareButtons">Хардвер дугмад</string>
+    <string name="playerName">Име играча</string>
+    <string name="settings">Подешавања</string>
+    <string name="bomb">Бомба</string>
+    <string name="jump">Скок</string>
+    <string name="punch">Ударац</string>
+    <string name="pickUp">Покупи</string>
+    <string name="run1">Трчање 1</string>
+    <string name="run2">Трчање 2</string>
+    <string name="start">Стартуј</string>
+    <string name="pressAnyKeyButton">Притисни било које дугме...</string>
+    <string name="capturing">Чекање...</string>
+    <string name="resetToDefault">Рестартуј на подразумевано</string>
+    <string name="enterAddress">Унеси адресу</string>
+    <string name="connect">Повежи се</string>
+    <string name="cancel">Откажи</string>
+    <string name="joinByAddress">Придружи се преко адресе...</string>
+    <string name="connected">Повезано.</string>
+    <string name="connecting">Повезивање...</string>
+    <string name="lag">Кашњење: ${SECONDS} секунди</string>
+    <string name="cantResolveHost">Не може да се пронађе домаћин.</string>
+    <string name="disconnected">Ниси више повезан на сервер.</string>
+    <string name="gameFull">Игра је пуна или не прихвата конекције.</string>
+    <string name="versionMismatch">Верзије се не подударају.\nБуди сигуран да су BombSquad и BombSquad\nRemote на последњој верзији и покушај опет.</string>
+    <string name="gameShutDown">Игра је угашена.</string>
+</resources>
