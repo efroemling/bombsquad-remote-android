@@ -114,13 +114,14 @@ public class ScanActivity extends Activity {
         _stopperThread.start();
 
         this._adapter = new LibraryAdapter(this);
-        this._listView = (ListView) this.findViewById(android.R.id.list);
+        this._listView = this.findViewById(android.R.id.list);
         this._listView.addHeaderView(_adapter.headerView, null, false);
         this._listView.setAdapter(_adapter);
 
         // pull our player name from prefs
         final SharedPreferences preferences = getSharedPreferences("BSRemotePrefs", Context.MODE_PRIVATE);
         String playerNameVal = preferences.getString("playerName", "");
+        assert playerNameVal != null;
         if (!playerNameVal.equals("")) {
             playerName = playerNameVal;
         }
@@ -246,11 +247,9 @@ public class ScanActivity extends Activity {
                         _scannerSocket.receive(packet);
                         abstract class PacketRunnable implements Runnable {
                             DatagramPacket p;
-
                             PacketRunnable(DatagramPacket pIn) {
                                 p = pIn;
                             }
-
                             public abstract void run();
                         }
                         _scannerThread.doRunnable(new PacketRunnable(packet) {
@@ -385,7 +384,7 @@ public class ScanActivity extends Activity {
             String addrVal = preferences.getString("manualConnectAddress", "");
 
             // set up EditText to get input
-            final EditText editText = (EditText) view.findViewById(R.id.editText);
+            final EditText editText = view.findViewById(R.id.editText);
             editText.setText(addrVal);
 
             editText.setImeOptions(EditorInfo.IME_FLAG_NO_EXTRACT_UI);
@@ -425,19 +424,19 @@ public class ScanActivity extends Activity {
     }
 
     public class LibraryAdapter extends BaseAdapter {
-        protected Context _context;
-        protected LayoutInflater _inflater;
-        public View headerView;
+        Context _context;
+        LayoutInflater _inflater;
+        View headerView;
 
-        protected final LinkedList<String> _knownGames = new LinkedList<>();
+        final LinkedList<String> _knownGames = new LinkedList<>();
 
-        public LibraryAdapter(Context context) {
+        LibraryAdapter(Context context) {
             this._context = context;
             this._inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             this.headerView = _inflater.inflate(R.layout.item_network, null, false);
         }
 
-        public void notifyLost(String gameName) {
+        void notifyLost(String gameName) {
             if (Looper.getMainLooper().getThread() != Thread.currentThread())
                 throw new AssertionError();
             if (_knownGames.contains(gameName)) {
@@ -446,7 +445,7 @@ public class ScanActivity extends Activity {
             }
         }
 
-        public void notifyFound(String gameName) {
+        void notifyFound(String gameName) {
             if (Looper.getMainLooper().getThread() != Thread.currentThread())
                 throw new AssertionError();
             if (!_knownGames.contains(gameName)) {
@@ -480,13 +479,13 @@ public class ScanActivity extends Activity {
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
                 convertView = _inflater.inflate(android.R.layout.simple_list_item_1, parent, false);
-                TextView tv = (TextView) convertView.findViewById(android.R.id.text1);
+                TextView tv = convertView.findViewById(android.R.id.text1);
                 tv.setPadding(40, 0, 0, 0);
                 tv.setTextColor(0xFFCCCCFF);
             }
             try {
                 String gameName = (String) this.getItem(position);
-                TextView tv = (TextView) convertView.findViewById(android.R.id.text1);
+                TextView tv = convertView.findViewById(android.R.id.text1);
                 tv.setText(gameName);
 
             } catch (Exception e) {
