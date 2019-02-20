@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Χειριστήριο BombSquad</string>
+    <string name="app_name_short">BSΧειριστήριο</string>
+    <string name="item_network_title">Αναζήτηση για παιχνίδια BombSquad...</string>
+    <string name="item_network_caption">Πατήστε στο όνομα ένος παιχνδιού για να συνδεθείτε σε αυτό.\nΣιγουρευτείτε ότι βρίσκεστε στο ίδιο δίκτυο wifi με το παιχνίδι.</string>
+    <string name="dPadSize">Μέγεθος D-Pad</string>
+    <string name="buttonSize">Μέγεθος Κουμπιών</string>
+    <string name="dPadPosition">Θέση D-Pad</string>
+    <string name="buttonPosition">Θέση Κουμπιών</string>
+    <string name="dPadType">Τύπος D-Pad</string>
+    <string name="floating">ελεύθερο</string>
+    <string name="fixed">σταθερό</string>
+    <string name="configHardwareButtons">Κουμπιά Υλισμικού</string>
+    <string name="playerName">Όνομα Παίκτη</string>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="bomb">Βόμβα</string>
+    <string name="jump">Άλμα</string>
+    <string name="punch">Γροθιά</string>
+    <string name="pickUp">Αρπαγή</string>
+    <string name="run1">Τρέξιμο 1</string>
+    <string name="run2">Τρέξιμο 2</string>
+    <string name="start">Εκκίνηση</string>
+    <string name="pressAnyKeyButton">Πατήστε οποιοδήποτε κουμπί...</string>
+    <string name="capturing">Σύλληψη...</string>
+    <string name="resetToDefault">Επαναφορά στα Προκαθορισμένα</string>
+    <string name="enterAddress">Εισάγετε Διεύθυνση</string>
+    <string name="connect">Σύνδεση</string>
+    <string name="cancel">Άκυρο</string>
+    <string name="joinByAddress">Ένταξη μέσω Διεύθυνσης...</string>
+    <string name="connected">Συνδέθηκε.</string>
+    <string name="connecting">Σύνδεση...</string>
+    <string name="lag">Καθυστέρηση: ${SECONDS} δευτερόλεπτα</string>
+    <string name="cantResolveHost">Αδύνατη η επίλυση του οικοδεσπότη.</string>
+    <string name="disconnected">Ο διακομιστής σας αποσύνδεσε.</string>
+    <string name="gameFull">Αυτό το παιχνίδι είναι γεμάτο ή δεν δέχεται συνδέσεις.</string>
+    <string name="versionMismatch">Οι εκδόσεις δεν ταιριάζουν.\nΣιγουρευτείτε ότι έχετε τις πιό πρόσφατες εκδόσεις για το\nBombSquad και για το Χειριστήριο BombSquad και ξαναπροσπαθήστε.</string>
+    <string name="gameShutDown">Το παιχνίδι έκλεισε.</string>
+</resources>

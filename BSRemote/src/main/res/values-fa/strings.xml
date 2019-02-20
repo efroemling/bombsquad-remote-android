@@ -2,14 +2,14 @@
 <resources>
     <string name="app_name">BombSquad کنترولر مخصوص</string>
     <string name="app_name_short">BSRemote</string>
-    <string name="item_network_title">جستجو برای بازی ها فعال</string>
+    <string name="item_network_title">جستجو برای بازی‌های فعال</string>
     <string name="item_network_caption">بر روی نام یک بازی برای پیوستن به آن ضربه بزنید.\nاطمینان حاصل کنید که شما در شبکه وای فای همان بازی هستید.</string>
-    <string name="dPadSize">D-Pad Size</string>
+    <string name="dPadSize">D-Pad اندازه</string>
     <string name="buttonSize">اندازه دکمه</string>
-    <string name="dPadPosition">D-Pad Position</string>
+    <string name="dPadPosition">D-Pad موقعیت</string>
     <string name="buttonPosition">مکان دکمه</string>
     <string name="dPadType">D-Pad Type</string>
-    <string name="floating">floating</string>
+    <string name="floating">شناور</string>
     <string name="fixed">ثابت</string>
     <string name="configHardwareButtons">دکمه سخت افزاری</string>
     <string name="playerName">نام بازیکن</string>
@@ -31,9 +31,9 @@
     <string name="connected">.متصل شد</string>
     <string name="connecting">در حال اتصال</string>
     <string name="lag">ثانیه ${SECONDS} : تاخیر</string>
-    <string name="cantResolveHost">Can\'t resolve host.</string>
+    <string name="cantResolveHost">میزبان را نمی‌توان یافت.</string>
     <string name="disconnected">قطع اتصال از سرور</string>
     <string name="gameFull">بازی تکمیل است یا اتصالات پذیرفته نشدند</string>
-    <string name="versionMismatch">عدم تطابق نسخه ها\nاطمینان حاصل کنید که بمب اسکوار و کنترولر\nبمب اسکواد آخرین ورژن باشن و دوباره امتحان کنید</string>
+    <string name="versionMismatch">عدم تطابق نسخه‌ها\nاطمینان حاصل کنید که بمب‌اسکوار و کنترولر\nآخرین ورژن باشن و دوباره امتحان کنید</string>
     <string name="gameShutDown">بازی تعطیل شد</string>
 </resources>
