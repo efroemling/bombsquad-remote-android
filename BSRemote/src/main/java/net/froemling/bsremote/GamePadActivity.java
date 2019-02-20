@@ -1723,13 +1723,12 @@ public class GamePadActivity extends Activity {
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        //Log.v(TAG,"KEYDOWN: "+keyCode);
         return super.onKeyDown(keyCode, event);
     }
 
     // handle periodic processing such as receipt re-requests
     protected void _processUI() {
-        // eww as of android 4.4.2 theres several things that cause
+        // eww as of android 4.4.2 there's several things that cause
         // immersive mode state to get lost.. (such as volume up/down buttons)
         // ...so for now lets force the issue
         if (android.os.Build.VERSION.SDK_INT >= 19 && mWindowIsFocused) {
@@ -1739,7 +1738,6 @@ public class GamePadActivity extends Activity {
 
     @TargetApi(19)
     private void _setImmersiveMode() {
-        //if (true) return;
         int vis = View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
@@ -1747,7 +1745,6 @@ public class GamePadActivity extends Activity {
                 | View.SYSTEM_UI_FLAG_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
         if (mGLView.getSystemUiVisibility() != vis) {
-            //screenMessage("FORCING IMMERSIVE");
             mGLView.setSystemUiVisibility(vis);
         }
     }
@@ -1755,9 +1752,7 @@ public class GamePadActivity extends Activity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
-
         mWindowIsFocused = hasFocus;
-
         if (android.os.Build.VERSION.SDK_INT >= 19 && hasFocus) {
             _setImmersiveMode();
         }
