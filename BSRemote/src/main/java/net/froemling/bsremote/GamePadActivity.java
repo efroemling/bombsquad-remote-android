@@ -735,19 +735,19 @@ class MyGLSurfaceView extends GLSurfaceView {
   }
 
   private void _updateHardwareControlsLabels(Dialog d) {
-    TextView t = (TextView) d.findViewById(R.id.textPickUp);
+    TextView t = d.findViewById(R.id.textPickUp);
     t.setText(getPrettyKeyName(_keyPickUp));
-    t = (TextView) d.findViewById(R.id.textJump);
+    t = d.findViewById(R.id.textJump);
     t.setText(getPrettyKeyName(_keyJump));
-    t = (TextView) d.findViewById(R.id.textPunch);
+    t = d.findViewById(R.id.textPunch);
     t.setText(getPrettyKeyName(_keyPunch));
-    t = (TextView) d.findViewById(R.id.textBomb);
+    t = d.findViewById(R.id.textBomb);
     t.setText(getPrettyKeyName(_keyBomb));
-    t = (TextView) d.findViewById(R.id.textRun1);
+    t = d.findViewById(R.id.textRun1);
     t.setText(getPrettyKeyName(_keyRun1));
-    t = (TextView) d.findViewById(R.id.textRun2);
+    t = d.findViewById(R.id.textRun2);
     t.setText(getPrettyKeyName(_keyRun2));
-    t = (TextView) d.findViewById(R.id.textStart);
+    t = d.findViewById(R.id.textStart);
     t.setText(getPrettyKeyName(_keyStart));
 
   }
@@ -858,7 +858,6 @@ class MyGLSurfaceView extends GLSurfaceView {
           valueDPadY = event.getAxisValue(MotionEvent.AXIS_HAT_Y);
           valueTriggerL = event.getAxisValue(MotionEvent.AXIS_LTRIGGER);
           valueTriggerR = event.getAxisValue(MotionEvent.AXIS_RTRIGGER);
-
         }
         boolean triggerHeldL = (valueTriggerL >= 0.5);
         boolean triggerHeldR = (valueTriggerR >= 0.5);
@@ -1595,7 +1594,7 @@ public class GamePadActivity extends Activity {
     _statesV1 = new short[256];
     _statesV2 = new int[256];
 
-    // if we reconnect we may get acks for states we didnt send..
+    // if we reconnect we may get acks for states we didn't send..
     // so lets set everything to current time to avoid screwing up
     // our lag-meter
     long curTime = SystemClock.uptimeMillis();

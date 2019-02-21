@@ -120,8 +120,7 @@ public class ScanActivity extends Activity {
       playerName = playerNameVal;
     }
 
-    EditText editText =
-        (EditText) _adapter.headerView.findViewById(R.id.nameEditText);
+    EditText editText = _adapter.headerView.findViewById(R.id.nameEditText);
     if (editText != null) {
 
       // hmmm this counts emoji as 2 still but whatever...
@@ -161,6 +160,7 @@ public class ScanActivity extends Activity {
           public void run() {
             if (_serverEntries.containsKey(obj)) {
               _ServerEntry se = _serverEntries.get(obj);
+              assert se != null;
               Intent myIntent =
                   new Intent(ScanActivity.this, GamePadActivity.class);
               myIntent.putExtra("connectAddrs",
@@ -397,7 +397,8 @@ public class ScanActivity extends Activity {
       LayoutInflater layoutInflater = (LayoutInflater) getApplicationContext()
           .getSystemService(LAYOUT_INFLATER_SERVICE);
 
-      View view = layoutInflater.inflate(R.layout.dialog, null);
+      @SuppressLint("InflateParams") View view =
+          layoutInflater.inflate(R.layout.dialog, null);
 
       final SharedPreferences preferences =
           getSharedPreferences("BSRemotePrefs", Context.MODE_PRIVATE);
@@ -453,6 +454,7 @@ public class ScanActivity extends Activity {
 
     final LinkedList<String> _knownGames = new LinkedList<>();
 
+    @SuppressLint("InflateParams")
     LibraryAdapter(Context context) {
       this._context = context;
       this._inflater = (LayoutInflater) context
