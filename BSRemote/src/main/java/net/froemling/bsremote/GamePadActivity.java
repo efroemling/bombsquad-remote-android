@@ -684,7 +684,8 @@ class MyGLSurfaceView extends GLSurfaceView {
             _setActionKey(KeyEvent.KEYCODE_BUTTON_START);
             break;
           default:
-            LogThread.log("Error: unrecognized key in doActionKey", null);
+            LogThread.log("Error: unrecognized key in doActionKey", null,
+                d.getContext());
             break;
         }
         d.dismiss();
@@ -726,7 +727,8 @@ class MyGLSurfaceView extends GLSurfaceView {
         _keyStart = keyval;
         break;
       default:
-        LogThread.log("Error: unrecognized key in _setActionKey", null);
+        LogThread.log("Error: unrecognized key in _setActionKey", null,
+            getContext());
         break;
     }
     _savePrefs();
@@ -776,7 +778,8 @@ class MyGLSurfaceView extends GLSurfaceView {
         } else if (v == d.findViewById(R.id.buttonStart)) {
           _captureKey = CaptureKey.START;
         } else {
-          LogThread.log("Error: unrecognized capture button", null);
+          LogThread
+              .log("Error: unrecognized capture button", null, getContext());
         }
 
         Dialog d2 = doCaptureKey();
@@ -1156,9 +1159,7 @@ class MyGLSurfaceView extends GLSurfaceView {
       boolean runWasHeld =
           ((!this.mHeldKeys.isEmpty()) || mHeldTriggerL || mHeldTriggerR);
       Integer kcInt = keyCode;
-      if (this.mHeldKeys.contains(kcInt)) {
-        this.mHeldKeys.remove(kcInt);
-      }
+      this.mHeldKeys.remove(kcInt);
       boolean runIsHeld =
           ((!this.mHeldKeys.isEmpty()) || mHeldTriggerL || mHeldTriggerR);
       if (runWasHeld && !runIsHeld) {
@@ -1267,30 +1268,26 @@ class MyGLSurfaceView extends GLSurfaceView {
           action == MotionEvent.ACTION_POINTER_DOWN) &&
           (actionPointerIndex == i)) {
 
-        // prefs presses
         if (_pointInBox(x, y, _gl.prefsButtonX, _gl.prefsButtonY,
             _gl.prefsButtonWidth * tm, _gl.prefsButtonHeight * tm2)) {
+          // prefs presses
           _prefsTouch = fingerID;
           _prefsHover = true;
           _gl.prefsButtonPressed = true;
-        }
-
-        // check for a quit press
-        else if (_pointInBox(x, y, _gl.quitButtonX, _gl.quitButtonY,
+        } else if (_pointInBox(x, y, _gl.quitButtonX, _gl.quitButtonY,
             _gl.quitButtonWidth * tm, _gl.quitButtonHeight * tm2)) {
+          // check for a quit press
           _quitTouch = fingerID;
           _quitHover = true;
           _gl.quitButtonPressed = true;
-        }
-        // check for a start press
-        else if (_pointInBox(x, y, _gl.startButtonX, _gl.startButtonY,
+        } else if (_pointInBox(x, y, _gl.startButtonX, _gl.startButtonY,
             _gl.startButtonWidth * tm, _gl.startButtonHeight * tm2)) {
+          // check for a start press
           _startTouch = fingerID;
           _startHover = true;
           _gl.startButtonPressed = true;
-        }
-        // check for a dpad touch
-        else if (x < 0.5) {
+        } else if (x < 0.5) {
+          // check for a dpad touch
           _dPadTouch = fingerID;
           _dPadTouchIsMove = false;
           // in fixed joystick mode we want touches to count towards
@@ -1298,13 +1295,11 @@ class MyGLSurfaceView extends GLSurfaceView {
           if (_dPadType.equals("fixed")) {
             _dPadTouchIsMove = true;
           }
-
           _dPadTouchStartX = x;
           _dPadTouchStartY = y;
           _gl.joystickX = x;
           _gl.joystickY = y;
           _gl.thumbPressed = true;
-
         }
       }
       // handle existing button touches
@@ -1372,7 +1367,6 @@ class MyGLSurfaceView extends GLSurfaceView {
         }
       }
 
-
       // if its our existing dpad-touch
       if (fingerID == _dPadTouch) {
 
@@ -1434,7 +1428,6 @@ class MyGLSurfaceView extends GLSurfaceView {
               _gl.joystickX = _gl.joystickCenterX + sc * (xVal / s);
               _gl.joystickY = _gl.joystickCenterY + sc * (yVal / s);
             }
-
           }
 
           _gamePadActivity._dPadStateH = xValClamped;
@@ -1447,7 +1440,7 @@ class MyGLSurfaceView extends GLSurfaceView {
             action == MotionEvent.ACTION_POINTER_UP) &&
             (actionPointerIndex == i)) {
 
-          // if we hadnt moved yet, lets pass it along as a quick tap/release
+          // if we hadn't moved yet, lets pass it along as a quick tap/release
           // (useful for navigating menus)
           if (!_dPadTouchIsMove) {
             float toRight = x - _gl.joystickCenterX;
@@ -1618,7 +1611,7 @@ public class GamePadActivity extends Activity {
       try {
         _socket = new DatagramSocket();
       } catch (SocketException e) {
-        LogThread.log("Error setting up gamepad socket", e);
+        LogThread.log("Error setting up gamepad socket", e, this);
       }
       _addrsRaw = extras.getStringArray("connectAddrs");
     }
@@ -1678,7 +1671,8 @@ public class GamePadActivity extends Activity {
             _readThread = null;
             break;
           } catch (ArrayIndexOutOfBoundsException e) {
-            LogThread.log("Got excessively sized datagram packet", e);
+            LogThread.log("Got excessively sized datagram packet", e,
+                GamePadActivity.this);
           }
         }
       }
@@ -1870,7 +1864,7 @@ public class GamePadActivity extends Activity {
       try {
         _socket.send(new DatagramPacket(data, data.length, _addr, _port));
       } catch (IOException e) {
-        LogThread.log("", e);
+        LogThread.log("", e, GamePadActivity.this);
       }
     }
 
@@ -2236,7 +2230,7 @@ public class GamePadActivity extends Activity {
     // (so if we drop our connection and reconnect we can be reunited with
     // our old
     // dude instead of leaving a zombie)
-    String android_id = Secure
+    @SuppressLint("HardwareIds") String android_id = Secure
         .getString(getApplicationContext().getContentResolver(),
             Secure.ANDROID_ID);
 
@@ -2257,11 +2251,9 @@ public class GamePadActivity extends Activity {
     try {
       nameBytes = deviceName.getBytes("UTF-8");
     } catch (UnsupportedEncodingException e) {
-      LogThread.log("Error getting bytes from name", e);
+      LogThread.log("Error getting bytes from name", e, GamePadActivity.this);
     }
     int dLen = nameBytes.length;
-    // int dLen = deviceName.length();
-
     if (dLen > 99) {
       dLen = 99;
     }
@@ -2320,11 +2312,11 @@ public class GamePadActivity extends Activity {
         try {
           _socket.send(packet);
         } catch (IOException e) {
-          LogThread.log("Error on ID-request send", e);
+          LogThread.log("Error on ID-request send", e, GamePadActivity.this);
           Log.e(TAG, "Error on ID-request send: " + e.getMessage());
           e.printStackTrace();
         } catch (NullPointerException e) {
-          LogThread.log("Error on ID-request send", e);
+          LogThread.log("Error on ID-request send", e, GamePadActivity.this);
           Log.e(TAG, "Bad IP specified: " + e.getMessage());
         }
         i++;

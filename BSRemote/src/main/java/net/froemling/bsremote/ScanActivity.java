@@ -47,16 +47,10 @@ import android.widget.TextView;
 
 public class ScanActivity extends Activity {
 
-  // UGLY; this currently gets used by LogThread
-  static public Context mContext = null;
-
   public final static boolean debug = false;
-
   public final static String TAG = "SCAN";
-
   static final int BS_PACKET_REMOTE_GAME_QUERY = 8;
   static final int BS_PACKET_REMOTE_GAME_RESPONSE = 9;
-
   private Timer _processTimer;
 
   private WorkerThread _scannerThread;
@@ -100,11 +94,8 @@ public class ScanActivity extends Activity {
     }
     super.onCreate(savedInstanceState);
 
-    mContext = this.getApplicationContext();
-
     // we want to use our longer title here but we cant set it in the
-    // manifest
-    // since it carries over to our icon; grumble.
+    // manifest since it carries over to our icon; grumble.
     setTitle(R.string.app_name);
 
     setContentView(R.layout.gen_list);
@@ -242,7 +233,7 @@ public class ScanActivity extends Activity {
       _scannerSocket = new DatagramSocket();
       _scannerSocket.setBroadcast(true);
     } catch (SocketException e1) {
-      LogThread.log("Error setting up scanner socket", e1);
+      LogThread.log("Error setting up scanner socket", e1, this);
     }
 
     _readThread = new WorkerThread();
@@ -283,16 +274,19 @@ public class ScanActivity extends Activity {
                     // hmm should we store its address only
                     // when adding or every time
                     // we hear from them?..
-                    _serverEntries.get(s).address = p.getAddress();
-                    _serverEntries.get(s).port = p.getPort();
+                    _ServerEntry entry = _serverEntries.get(s);
+                    assert entry != null;
+                    entry.address = p.getAddress();
+                    entry.port = p.getPort();
                     runOnUiThread(new ObjRunnable<String>(s) {
                       public void run() {
                         _adapter.notifyFound(obj);
                       }
                     });
                   }
-                  _serverEntries.get(s).lastPingTime =
-                      SystemClock.uptimeMillis();
+                  _ServerEntry entry = _serverEntries.get(s);
+                  assert entry != null;
+                  entry.lastPingTime = SystemClock.uptimeMillis();
                 }
               }
             });
@@ -303,7 +297,8 @@ public class ScanActivity extends Activity {
             _readThread = null;
             break;
           } catch (ArrayIndexOutOfBoundsException e) {
-            LogThread.log("Got excessively sized datagram packet", e);
+            LogThread.log("Got excessively sized datagram packet", e,
+                ScanActivity.this);
           }
         }
       }
@@ -353,7 +348,7 @@ public class ScanActivity extends Activity {
               }
 
             } catch (IOException ex) {
-              LogThread.log("", ex);
+              LogThread.log("", ex, ScanActivity.this);
             }
 
             // prune servers we haven't heard from in a while..
@@ -521,7 +516,7 @@ public class ScanActivity extends Activity {
         tv.setText(gameName);
 
       } catch (Exception e) {
-        LogThread.log("Problem getting zero-conf info", e);
+        LogThread.log("Problem getting zero-conf info", e, ScanActivity.this);
         ((TextView) convertView.findViewById(android.R.id.text1))
             .setText("Unknown");
       }

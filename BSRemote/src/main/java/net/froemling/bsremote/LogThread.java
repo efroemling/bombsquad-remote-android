@@ -21,7 +21,7 @@ public class LogThread extends Thread {
   private String _version;
   private static boolean _sent = false;
 
-  static void log(String s, Throwable e) {
+  static void log(String s, Throwable e, Context c) {
     // only report the first error..
     if (!_sent) {
       if (e != null) {
@@ -33,7 +33,7 @@ public class LogThread extends Thread {
         s += sw.toString();
       }
 
-      new LogThread(ScanActivity.mContext, s).start();
+      new LogThread(c, s).start();
       _sent = true;
     }
     // report all to the standard log
