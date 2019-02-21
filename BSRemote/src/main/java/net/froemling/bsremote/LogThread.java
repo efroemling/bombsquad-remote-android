@@ -7,14 +7,18 @@ import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.net.HttpURLConnection;
 
 import android.content.Context;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.os.Build;
 import android.util.Log;
 import android.util.Pair;
+
 
 public class LogThread extends Thread {
   private String _log;
@@ -92,7 +96,7 @@ public class LogThread extends Thread {
       nameValuePairs.add(new Pair<>("version", _version));
       nameValuePairs.add(new Pair<>("log", _log));
       String out = getQuery(nameValuePairs);
-      byte[] postDataBytes = out.getBytes("UTF-8");
+      byte[] postDataBytes = out.getBytes(getCharsetUTF8());
 
       OutputStream os = conn.getOutputStream();
       os.write(postDataBytes);
@@ -106,6 +110,14 @@ public class LogThread extends Thread {
 
     } catch (IOException e) {
       Log.v("BSREMOTE", "ERR ON LogThread post");
+    }
+  }
+
+  private static Charset getCharsetUTF8() {
+    if (Build.VERSION_CODES.KITKAT <= Build.VERSION.SDK_INT) {
+      return StandardCharsets.UTF_8;
+    } else {
+      return Charset.forName("UTF-8");
     }
   }
 

@@ -1,18 +1,18 @@
 package net.froemling.bsremote;
 
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
 import java.net.UnknownHostException;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Random;
 import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.TreeSet;
-
 import android.annotation.SuppressLint;
 import android.opengl.GLSurfaceView;
 import android.os.Build;
@@ -40,7 +40,6 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
-
 import java.lang.Math;
 
 class MyGLSurfaceView extends GLSurfaceView {
@@ -870,7 +869,9 @@ class MyGLSurfaceView extends GLSurfaceView {
           mHeldTriggerR = triggerHeldR;
           boolean runIsHeld =
               ((!this.mHeldKeys.isEmpty()) || mHeldTriggerL || mHeldTriggerR);
-          if (!runWasHeld && runIsHeld) {
+          if (!runWasHeld) {
+            // if (!runWasHeld && runIsHeld) {
+            // (logically runIsHeld is always true here; shutting up lint)
             _handleRunPress();
           }
           if (runWasHeld && !runIsHeld) {
@@ -1246,6 +1247,8 @@ class MyGLSurfaceView extends GLSurfaceView {
   }
 
   // Touch events
+  @SuppressWarnings("ConstantConditions")
+  @SuppressLint("ClickableViewAccessibility")
   @Override
   public boolean onTouchEvent(MotionEvent event) {
     final int pointerCount = event.getPointerCount();
@@ -1454,9 +1457,9 @@ class MyGLSurfaceView extends GLSurfaceView {
               _gamePadActivity._dPadStateH = 0.0f;
               _gamePadActivity._dPadStateV = 0.0f;
               _gamePadActivity._doStateChange(false);
-            }
-            // left
-            else if (toLeft > toRight && toLeft > toTop && toLeft > toBottom) {
+            } else if (toLeft > toRight && toLeft > toTop &&
+                toLeft > toBottom) {
+              // left
               _gamePadActivity._dPadStateH = -1.0f;
               _gamePadActivity._dPadStateV = 0.0f;
               _gamePadActivity._doStateChange(false);
@@ -1556,6 +1559,7 @@ public class GamePadActivity extends Activity {
   private boolean _shuttingDown = false;
   private long _lastNullStateTime = 0;
   private long[] _stateBirthTimes;
+  @SuppressWarnings("MismatchedReadAndWriteOfArray")
   private long[] _stateLastSentTimes;
   short _buttonStateV1 = 0;
   short _buttonStateV2 = 0;
@@ -1912,12 +1916,9 @@ public class GamePadActivity extends Activity {
       }
     }
 
-    // if we've got states we havn't heard an ack for yet, keep shipping 'em
+    // if we've got states we haven't heard an ack for yet, keep shipping 'em
     // out
     int stateDiff = (_requestedState - _nextState) & 0xFF;
-    if (BuildConfig.DEBUG && stateDiff < 0) {
-      throw new AssertionError();
-    }
 
     // if they've requested a state we don't have yet, we don't need to
     // resend anything
@@ -1930,7 +1931,7 @@ public class GamePadActivity extends Activity {
         _lastNullStateTime = t;
       }
     } else {
-      // ok we've got at least one state we havn't heard confirmation for
+      // ok we've got at least one state we haven't heard confirmation for
       // yet.. lets ship 'em out..
       if (_usingProtocolV2) {
         _shipUnAckedStatesV2();
@@ -2214,6 +2215,14 @@ public class GamePadActivity extends Activity {
     }
   }
 
+  static public Charset getCharsetUTF8() {
+    if (Build.VERSION_CODES.KITKAT <= Build.VERSION.SDK_INT) {
+      return StandardCharsets.UTF_8;
+    } else {
+      return Charset.forName("UTF-8");
+    }
+  }
+
   private void _sendIdRequest() {
     if (_connected) {
       throw new AssertionError();
@@ -2246,12 +2255,8 @@ public class GamePadActivity extends Activity {
     } else {
       deviceName = "Android remote (" + android.os.Build.MODEL + ")";
     }
-    byte[] nameBytes = new byte[0];
-    try {
-      nameBytes = deviceName.getBytes("UTF-8");
-    } catch (UnsupportedEncodingException e) {
-      LogThread.log("Error getting bytes from name", e, GamePadActivity.this);
-    }
+    byte[] nameBytes;
+    nameBytes = deviceName.getBytes(getCharsetUTF8());
     int dLen = nameBytes.length;
     if (dLen > 99) {
       dLen = 99;

@@ -249,20 +249,20 @@ public class GLRenderer implements GLSurfaceView.Renderer {
     checkGlError("loadTexture");
   }
 
-  private void _drawBG(float r, float g, float b, float a, int tex) {
+  private void _drawBG(int tex) {
     float[] m = new float[16];
     Matrix.setIdentityM(m, 0);
     Matrix.scaleM(m, 0, -2.0f, 2.0f, 1.0f);
     if (tex == -1) {
-      mSquare.draw(m, r, g, b, a);
+      mSquare.draw(m, (float) 1, (float) 1, (float) 1, (float) 1);
     } else {
-      mSquareTex.draw(m, r, g, b, a, _bgTex);
+      mSquareTex.draw(m, (float) 1, (float) 1, (float) 1, (float) 1, _bgTex);
     }
     checkGlError("draw");
   }
 
   private void _drawBox(float x, float y, float sx, float sy, float r, float g,
-                        float b, float a, int tex) {
+                        float b, int tex) {
     // scale and translate
     float[] m = new float[16];
     Matrix.setIdentityM(m, 0);
@@ -272,9 +272,9 @@ public class GLRenderer implements GLSurfaceView.Renderer {
     float[] m2 = new float[16];
     Matrix.multiplyMM(m2, 0, m, 0, mMVPMatrix, 0);
     if (tex == -1) {
-      mSquare.draw(m2, r, g, b, a);
+      mSquare.draw(m2, r, g, b, 1.0f);
     } else {
-      mSquareTex.draw(m2, r, g, b, a, tex);
+      mSquareTex.draw(m2, r, g, b, 1.0f, tex);
     }
     checkGlError("draw");
   }
@@ -292,32 +292,32 @@ public class GLRenderer implements GLSurfaceView.Renderer {
     Matrix.multiplyMM(mMVPMatrix, 0, mProjMatrix, 0, mVMatrix, 0);
 
     GLES20.glDisable(GLES20.GL_BLEND);
-    _drawBG(1, 1, 1, 1, _bgTex);
+    _drawBG(_bgTex);
 
     // actual graphics
     GLES20.glEnable(GLES20.GL_BLEND);
     GLES20.glBlendFunc(GLES20.GL_ONE, GLES20.GL_ONE_MINUS_SRC_ALPHA);
     float bs = 2.8f;
     _drawBox(bombButtonX, bombButtonY, bombButtonWidth * bs,
-        bombButtonHeight * bs, 1, 1, 1, 1.0f,
+        bombButtonHeight * bs, 1, 1, 1,
         bombPressed ? _buttonBombPressedTex : _buttonBombTex);
     _drawBox(punchButtonX, punchButtonY, punchButtonWidth * bs,
-        punchButtonHeight * bs, 1, 1, 1, 1.0f,
+        punchButtonHeight * bs, 1, 1, 1,
         punchPressed ? _buttonPunchPressedTex : _buttonPunchTex);
     _drawBox(jumpButtonX, jumpButtonY, jumpButtonWidth * bs,
-        jumpButtonHeight * bs, 1, 1, 1, 1.0f,
+        jumpButtonHeight * bs, 1, 1, 1,
         jumpPressed ? _buttonJumpPressedTex : _buttonJumpTex);
     _drawBox(throwButtonX, throwButtonY, throwButtonWidth * bs,
-        throwButtonHeight * bs, 1, 1, 1, 1.0f,
+        throwButtonHeight * bs, 1, 1, 1,
         throwPressed ? _buttonThrowPressedTex : _buttonThrowTex);
 
     float cs = 2.2f;
     _drawBox(joystickCenterX, joystickCenterY, joystickWidth * cs,
-        joystickHeight * cs, 1, 1, 1, 1.0f, _centerTex);
+        joystickHeight * cs, 1, 1, 1, _centerTex);
 
     float ts = 0.9f;
     _drawBox(joystickX, joystickY, joystickWidth * ts, joystickHeight * ts, 1,
-        1, 1, 1.0f, thumbPressed ? _thumbPressedTex : _thumbTex);
+        1, 1, thumbPressed ? _thumbPressedTex : _thumbTex);
 
     float tbsx = 1.1f;
     float tbsy = 1.6f;
@@ -326,13 +326,13 @@ public class GLRenderer implements GLSurfaceView.Renderer {
     float b;
     b = quitButtonPressed ? 2.0f : 1.0f;
     _drawBox(quitButtonX, quitButtonY + tboy, quitButtonWidth * tbsx,
-        quitButtonHeight * tbsy, b, b, b, 1.0f, _buttonLeaveTex);
+        quitButtonHeight * tbsy, b, b, b, _buttonLeaveTex);
     b = prefsButtonPressed ? 2.0f : 1.0f;
     _drawBox(prefsButtonX, prefsButtonY + tboy, prefsButtonWidth * tbsx,
-        prefsButtonHeight * tbsy, b, b, b, 1.0f, _buttonSettingsTex);
+        prefsButtonHeight * tbsy, b, b, b, _buttonSettingsTex);
     b = startButtonPressed ? 2.0f : 1.0f;
     _drawBox(startButtonX, startButtonY + tboy, startButtonWidth * tbsx,
-        startButtonHeight * tbsy, b, b, b, 1.0f, _buttonStartTex);
+        startButtonHeight * tbsy, b, b, b, _buttonStartTex);
 
   }
 
