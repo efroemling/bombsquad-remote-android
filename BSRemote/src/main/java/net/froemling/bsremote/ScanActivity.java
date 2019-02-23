@@ -24,6 +24,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
 import android.os.SystemClock;
@@ -48,7 +49,7 @@ import android.widget.TextView;
 public class ScanActivity extends Activity {
 
   public final static boolean debug = false;
-  public final static String TAG = "SCAN";
+  public final static String TAG = "BSRemoteScan";
   static final int BS_PACKET_REMOTE_GAME_QUERY = 8;
   static final int BS_PACKET_REMOTE_GAME_RESPONSE = 9;
   private Timer _processTimer;
@@ -58,6 +59,7 @@ public class ScanActivity extends Activity {
   private WorkerThread _readThread;
 
   private DatagramSocket _scannerSocket;
+  private long _lastGameClickTime = 0;
 
   class _ServerEntry {
     InetAddress address;
@@ -149,7 +151,7 @@ public class ScanActivity extends Activity {
       });
     }
 
-    this._listView.setOnItemClickListener(new OnItemClickListener() {
+    _listView.setOnItemClickListener(new OnItemClickListener() {
       public void onItemClick(AdapterView<?> parent, View view, int position,
                               long id) {
         String name =
@@ -158,6 +160,15 @@ public class ScanActivity extends Activity {
 
         _scannerThread.doRunnable(new ObjRunnable<String>(name) {
           public void run() {
+
+            // prevent case where double tapping an entry quickly enough can
+            // bring up two gamepad activities
+            long currentTime = SystemClock.uptimeMillis();
+            if (currentTime - ScanActivity.this._lastGameClickTime < 2000) {
+              Log.v(TAG, "Suppressing repeat join-game tap.");
+              return;
+            }
+            ScanActivity.this._lastGameClickTime = currentTime;
             if (_serverEntries.containsKey(obj)) {
               _ServerEntry se = _serverEntries.get(obj);
               assert se != null;
@@ -168,7 +179,6 @@ public class ScanActivity extends Activity {
               myIntent.putExtra("connectPort", se.port);
               myIntent.putExtra("newStyle", true);
               startActivity(myIntent);
-
             }
           }
         });
@@ -193,13 +203,21 @@ public class ScanActivity extends Activity {
     // have the worker threads shut themselves down
     _scannerThread.doRunnable(new Runnable() {
       public void run() {
-        _scannerThread.getLooper().quit();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+          _scannerThread.getLooper().quitSafely();
+        } else {
+          _scannerThread.getLooper().quit();
+        }
         _scannerThread = null;
 
         // have the worker threads shut themselves down
         _stopperThread.doRunnable(new Runnable() {
           public void run() {
-            _stopperThread.getLooper().quit();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+              _stopperThread.getLooper().quitSafely();
+            } else {
+              _stopperThread.getLooper().quit();
+            }
             _stopperThread = null;
           }
         });
@@ -293,7 +311,11 @@ public class ScanActivity extends Activity {
 
           } catch (IOException e) {
             // assuming this means the socket is closed..
-            _readThread.getLooper().quit();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+              _readThread.getLooper().quitSafely();
+            } else {
+              _readThread.getLooper().quit();
+            }
             _readThread = null;
             break;
           } catch (ArrayIndexOutOfBoundsException e) {

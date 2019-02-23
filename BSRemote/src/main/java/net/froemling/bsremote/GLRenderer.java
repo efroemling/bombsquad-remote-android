@@ -115,20 +115,7 @@ public class GLRenderer implements GLSurfaceView.Renderer {
     return id;
   }
 
-  //	public static void printMat(float[] matrix,String name){
-  //        Log.v(TAG,name+ ":\n   ["+matrix[0]+", "+matrix[1]+",
-  // "+matrix[2]+", "+matrix[3]+"]"
-  //        				+"\n   ["+matrix[4]+", "+matrix[5]+",
-  // "+matrix[6]+", "+matrix[7]+"]"
-  //						+"\n   ["+matrix[8]+", "+matrix[9]+",
-  // "+matrix[10]+", "+matrix[11]+"]"
-  //						+"\n   ["+matrix[12]+", "+matrix[13]+",
-  // "+matrix[14]+", "+matrix[15]+"]");
-  //
-  //
-  //	}
-
-  private static final String TAG = "GL";
+  private static final String TAG = "BSRemoteGLRenderer";
   private Square mSquare;
   private SquareTex mSquareTex;
 

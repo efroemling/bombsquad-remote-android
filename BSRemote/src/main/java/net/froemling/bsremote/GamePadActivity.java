@@ -13,6 +13,7 @@ import java.util.Set;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.TreeSet;
+
 import android.annotation.SuppressLint;
 import android.opengl.GLSurfaceView;
 import android.os.Build;
@@ -40,6 +41,7 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.util.Log;
+
 import java.lang.Math;
 
 class MyGLSurfaceView extends GLSurfaceView {
@@ -1503,8 +1505,9 @@ class MyGLSurfaceView extends GLSurfaceView {
 
 public class GamePadActivity extends Activity {
 
+  // flip this on for lots of log spewage to help diagnose oddities
   public final static boolean debug = false;
-  public final static String TAG = "GPA";
+  public final static String TAG = "BSRemoteGamePad";
   private WorkerThread _readThread;
   private WorkerThread _processThread;
   private Timer _processTimer;
@@ -1661,6 +1664,12 @@ public class GamePadActivity extends Activity {
             }
             _processThread.doRunnable(new PacketRunnable(packet) {
               public void run() {
+                // (delay for testing disconnect race conditions)
+//                try {
+//                  Thread.sleep(1000);
+//                } catch (InterruptedException e) {
+//                  e.printStackTrace();
+//                }
                 GamePadActivity.this._readFromSocket(p);
               }
             });
@@ -1670,7 +1679,11 @@ public class GamePadActivity extends Activity {
             if (debug) {
               Log.v(TAG, "READ THREAD DYING");
             }
-            _readThread.getLooper().quit();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+              _readThread.getLooper().quitSafely();
+            } else {
+              _readThread.getLooper().quit();
+            }
             _readThread = null;
             break;
           } catch (ArrayIndexOutOfBoundsException e) {
@@ -1707,13 +1720,16 @@ public class GamePadActivity extends Activity {
 
   public void shutDown() {
 
+    if (debug) {
+      Log.v(TAG, "SETTING _shuttingDown");
+    }
     _shuttingDown = true;
     _shutDownStartTime = SystemClock.uptimeMillis();
 
-    // create our shutdown timer.. this will keep us
+    // Create our shutdown timer.. this will keep us
     // trying to disconnect cleanly with the server until
-    // we get confirmation or we give up
-    // tell our worker thread to start its update timer
+    // we get confirmation or we give up.
+    // Tell our worker thread to start its update timer.
     _processThread.doRunnable(new Runnable() {
       public void run() {
         if (debug) {
@@ -1724,8 +1740,11 @@ public class GamePadActivity extends Activity {
         _shutDownTimer.schedule(new TimerTask() {
           @Override
           public void run() {
-            // when this timer fires, tell our process
-            // thread to run
+            // when this timer fires, tell our process thread to run
+            if (_processThread == null) {
+              Log.v(TAG, "Got null _processThread in runnable.");
+              return;
+            }
             _processThread.doRunnable(new Runnable() {
               public void run() {
                 GamePadActivity.this._process();
@@ -1793,8 +1812,7 @@ public class GamePadActivity extends Activity {
         _processUITimer.schedule(new TimerTask() {
           @Override
           public void run() {
-            // when this timer fires, tell our process
-            // thread to run
+            // when this timer fires, tell our process thread to run
             runOnUiThread(new Runnable() {
               public void run() {
                 GamePadActivity.this._processUI();
@@ -1874,8 +1892,10 @@ public class GamePadActivity extends Activity {
   }
 
   private void _process() {
-    if (BuildConfig.DEBUG && Thread.currentThread() != _processThread) {
-      throw new AssertionError("thread error");
+    if (_processThread != null && Thread.currentThread() != _processThread) {
+      Log.v(TAG, "Incorrect thread on _process");
+      return;
+      // throw new AssertionError("thread error");
     }
 
     // if any of these happen after we're dead totally ignore them
@@ -1903,12 +1923,16 @@ public class GamePadActivity extends Activity {
           finishUsOff = true;
         }
       }
-      if (finishUsOff && !_dead) {
+      if (finishUsOff && !_dead && _shutDownTimer != null) {
         _dead = true;
         // ok we're officially dead.. clear out our threads/timers/etc
         _shutDownTimer.cancel();
         _shutDownTimer.purge();
-        _processThread.getLooper().quit();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+          _processThread.getLooper().quitSafely();
+        } else {
+          _processThread.getLooper().quit();
+        }
         _processThread = null;
         // this should kill our read-thread
         _socket.close();
@@ -2335,8 +2359,10 @@ public class GamePadActivity extends Activity {
   private void _readFromSocket(DatagramPacket packet) {
     byte[] buffer = packet.getData();
     int amt = packet.getLength();
-    if (Thread.currentThread() != _processThread) {
-      throw new AssertionError();
+    if (_processThread != null && Thread.currentThread() != _processThread) {
+      Log.v(TAG, "_readFromSocket called in unexpected thread; ignoring.");
+      return;
+      // throw new AssertionError();
     }
     if (amt > 0) {
       if (buffer[0] == REMOTE_MSG_ID_RESPONSE) {
