@@ -1249,7 +1249,6 @@ class MyGLSurfaceView extends GLSurfaceView {
   }
 
   // Touch events
-  @SuppressWarnings("ConstantConditions")
   @SuppressLint("ClickableViewAccessibility")
   @Override
   public boolean onTouchEvent(MotionEvent event) {
@@ -1293,12 +1292,9 @@ class MyGLSurfaceView extends GLSurfaceView {
         } else if (x < 0.5) {
           // check for a dpad touch
           _dPadTouch = fingerID;
-          _dPadTouchIsMove = false;
           // in fixed joystick mode we want touches to count towards
           // joystick motion immediately; not just after they move
-          if (_dPadType.equals("fixed")) {
-            _dPadTouchIsMove = true;
-          }
+          _dPadTouchIsMove = _dPadType.equals("fixed");
           _dPadTouchStartX = x;
           _dPadTouchStartY = y;
           _gl.joystickX = x;
