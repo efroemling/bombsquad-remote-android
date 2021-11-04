@@ -7,5 +7,7 @@
     <string name="punch">Slå</string>
     <string name="pickUp">Saml op</string>
     <string name="pressAnyKeyButton">Tryk på hvilken som helst knap...</string>
+    <string name="connect">Opret forbindelse</string>
     <string name="cancel">Annuller</string>
+    <string name="connecting">Tilslutter...</string>
 </resources>

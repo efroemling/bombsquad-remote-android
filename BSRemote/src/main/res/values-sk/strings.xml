@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">Hľadám Bombsquad hry...</string>
+    <string name="item_network_caption">Stlač meno hry aby si sa na ňu pripojil.\nUisti sa že ste na tej istej Wi-Fi ako hra.</string>
+    <string name="dPadSize">Veľkosť D-Padu</string>
+    <string name="buttonSize">Veľkosť Tlačidiel</string>
+    <string name="dPadPosition">Pozícia D-Padu</string>
+    <string name="buttonPosition">Pozícia Tlačidiel</string>
+    <string name="dPadType">Typ D-Padu</string>
+    <string name="floating">uvoľnený</string>
+    <string name="fixed">stály</string>
+    <string name="configHardwareButtons">Hardwarové Tlačidlá</string>
+    <string name="playerName">Meno Hráča</string>
+    <string name="settings">Nastavenia</string>
+    <string name="bomb">Bomba</string>
+    <string name="jump">Skočiť</string>
+    <string name="punch">Úder</string>
+    <string name="pickUp">Zobrať</string>
+    <string name="run1">Beh 1</string>
+    <string name="run2">Beh 2</string>
+    <string name="start">Začať</string>
+    <string name="pressAnyKeyButton">Stlač akékolvek tlačidlo.</string>
+    <string name="capturing">Potvrdujem...</string>
+    <string name="resetToDefault">Resetovať na štandartné</string>
+    <string name="enterAddress">Pripojiť na Adresu</string>
+    <string name="connect">Pripojiť</string>
+    <string name="cancel">Zrušiť</string>
+    <string name="joinByAddress">Pripojiť sa na Adresu...</string>
+    <string name="connected">Pripojené.</string>
+    <string name="connecting">Pripájam sa...</string>
+    <string name="lag">Lag: ${SECONDS} sekúnd</string>
+    <string name="cantResolveHost">Nemožno nájsť hostiteľa.</string>
+    <string name="disconnected">Odpojené serverom.</string>
+    <string name="gameFull">Párty je plná alebo nepodporuje pripojenia.</string>
+    <string name="versionMismatch">Nezhoda verzií.\nUisti sa že je Bombsquad aj BSRemote\nna najnovšej verzii.</string>
+    <string name="gameShutDown">Hra sa vypla.</string>
+</resources>

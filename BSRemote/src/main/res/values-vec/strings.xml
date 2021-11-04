@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">Reserca partìe de BombSquad…</string>
+    <string name="item_network_caption">Toca el nome de ła partìa par zontarte.\nSegùrate de èsar so ła mèdema rede wifi de ła partìa.</string>
+    <string name="dPadSize">Grandesa croze deresionałe</string>
+    <string name="buttonSize">Grandesa botoni</string>
+    <string name="dPadPosition">Pozision croze deresionałe</string>
+    <string name="buttonPosition">Pozision botoni</string>
+    <string name="dPadType">Tipo de croze deresionałe</string>
+    <string name="floating">mòbiłe</string>
+    <string name="fixed">fiso</string>
+    <string name="configHardwareButtons">Botoni fìzeghi</string>
+    <string name="playerName">Nome zugador</string>
+    <string name="settings">Inpostasion</string>
+    <string name="bomb">Bonba</string>
+    <string name="jump">Salto</string>
+    <string name="punch">Crogno</string>
+    <string name="pickUp">Łeva sù</string>
+    <string name="run1">Corsa 1</string>
+    <string name="run2">Corsa 2</string>
+    <string name="start">Taca</string>
+    <string name="pressAnyKeyButton">Struca un boton calsìase...</string>
+    <string name="capturing">Drio spetar i zugadori…</string>
+    <string name="resetToDefault">Reinposta</string>
+    <string name="enterAddress">Insarisi ndariso</string>
+    <string name="connect">Coneti</string>
+    <string name="cancel">Anuła</string>
+    <string name="joinByAddress">Zóntate par ndariso...</string>
+    <string name="connected">Conetesto.</string>
+    <string name="connecting">Conesion...</string>
+    <string name="lag">Lag: ${SECONDS} segondi</string>
+    <string name="cantResolveHost">A no ze mìa posìbiłe catar fora l\'ospitador.</string>
+    <string name="disconnected">Desconetesto da\'l server.</string>
+    <string name="gameFull">El zugo el ze pien o no l\'aceta conesion.</string>
+    <string name="versionMismatch">Varsion zbałiada.\nSegùrate che BombSquad e BombSquad Remote i\nsipie ajornài a ła varsion ùltema e proa danovo.</string>
+    <string name="gameShutDown">El zugo el se gà stuà.</string>
+</resources>

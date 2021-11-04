@@ -34,6 +34,6 @@
     <string name="cantResolveHost">لا يمكن حل المضيف.</string>
     <string name="disconnected">قطع الاتصال من السيرفر.</string>
     <string name="gameFull">اللعبة كاملة أو لا تقبل الاتصالات.</string>
-    <string name="versionMismatch">عدم تطابق إصدار.\nتأكد من بومبسكاد و بومبسكاد البعيد\nهي أحدث الإصدارات وحاول مرة أخرى.</string>
+    <string name="versionMismatch">.الإصداران لا يتطابقان\nتأكد من أن فرقة القنبلة و فرقة القنبلة للتحكم عن بعد\n.تم تحديثهما لآخر إصدار وحاول مجددًا</string>
     <string name="gameShutDown">العبة لقد اطفأة</string>
 </resources>

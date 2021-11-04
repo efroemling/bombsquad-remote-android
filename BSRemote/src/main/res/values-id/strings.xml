@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Remot BombSquad</string>
-    <string name="app_name_short">BSRemot</string>
+    <string name="app_name_short">RemotBS</string>
     <string name="item_network_title">Mencari BombSquad...</string>
-    <string name="item_network_caption">Tekan nama dari game yang ingin dimasuki.\nPastikan kau berada di jaringan wifi yang sama dengan gamenya.</string>
+    <string name="item_network_caption">Ketuk nama permainan yang kamu inginkan.\nPastikan Kamu berada di jaringan wifi yang sama dengan permainan tersebut.</string>
     <string name="dPadSize">Ukuran D-Pad</string>
     <string name="buttonSize">Ukuran Tombol</string>
     <string name="dPadPosition">Posisi D-Pad</string>
@@ -31,9 +31,9 @@
     <string name="connected">Terhubung.</string>
     <string name="connecting">Menyambung...</string>
     <string name="lag">Lag: ${SECONDS} detik</string>
-    <string name="cantResolveHost">Tidak bisa menemukan pembuat.</string>
+    <string name="cantResolveHost">Tidak dapat menemukan pemilik.</string>
     <string name="disconnected">Diputus server</string>
-    <string name="gameFull">Game sudah penuh atau tidak menerima koneksi.</string>
-    <string name="versionMismatch">Versi tidak sama.\nPastikan BombSquad dan Remot BombSquad\nadalah versi terbaru dan coba lagi.</string>
-    <string name="gameShutDown">Game sudah mati</string>
+    <string name="gameFull">Permainan sudah penuh atau tidak menerima koneksi.</string>
+    <string name="versionMismatch">Versi tidak sama.\nPastikan kamu menggunakan BombSquad dan Remot BombSquad\ndengan versi terbaru dan coba lagi.</string>
+    <string name="gameShutDown">Permainan sudah berakhir</string>
 </resources>

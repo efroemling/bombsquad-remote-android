@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Điều khiển Bombsquad</string>
+    <string name="app_name_short">Điều khiển BS</string>
+    <string name="item_network_title">Đang tìm trò chơi Bombsquad...</string>
+    <string name="item_network_caption">Nhấn vào trò chơi để gia nhập.\nHãy chắc chắn rằng bạn có cùng mạng wifi.</string>
+    <string name="dPadSize">Kích cỡ D-pad</string>
+    <string name="buttonSize">Kích cỡ Nút</string>
+    <string name="dPadPosition">Vị trí D-pad</string>
+    <string name="buttonPosition">Vị trí Nút</string>
+    <string name="dPadType">Loại D-pad</string>
+    <string name="floating">Di chuyển</string>
+    <string name="fixed">Cố định</string>
+    <string name="configHardwareButtons">Nút Phần cứng</string>
+    <string name="playerName">Tên nhân vật</string>
+    <string name="settings">Cài đặt</string>
+    <string name="bomb">Bom</string>
+    <string name="jump">Nhảy</string>
+    <string name="punch">Đấm</string>
+    <string name="pickUp">Nhặt</string>
+    <string name="run1">Chạy 1</string>
+    <string name="run2">Chạy 2</string>
+    <string name="start">Bắt đầu</string>
+    <string name="pressAnyKeyButton">Nhấn nút bất kỳ...</string>
+    <string name="capturing">Đang chờ chấp thuận...</string>
+    <string name="resetToDefault">Cài lại mặc định</string>
+    <string name="enterAddress">Nhập địa chỉ</string>
+    <string name="connect">Kết nối</string>
+    <string name="cancel">Hủy</string>
+    <string name="joinByAddress">Gia nhập qua địa chỉ...</string>
+    <string name="connected">Đã kết nối</string>
+    <string name="connecting">Đang kết nối...</string>
+    <string name="lag">Trễ: ${SECONDS} giây</string>
+    <string name="cantResolveHost">Không thể tìm thấy máy chủ.</string>
+    <string name="disconnected">Đã bị ngắt kết nối bởi máy chủ.</string>
+    <string name="gameFull">Trò chơi đã đủ người chơi hoặc không chấp nhận kết nối.</string>
+    <string name="versionMismatch">Không trùng phiên bản.\nChắc chắn rằng Bombsquad và\nBombsquad Remote là phiên bản mới nhất và thử lại.</string>
+    <string name="gameShutDown">Trò chơi đã tắt.</string>
+</resources>

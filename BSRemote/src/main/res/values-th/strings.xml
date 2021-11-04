@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">กำลังค้นหาเกม BombSquad...</string>
+    <string name="item_network_caption">แตะที่ชื่อเกมเพื่อเข้าร่วม\nตรวจสอบให้แน่ใจว่าคุณอยู่ในเครือข่าย wifi เดียวกันกับเกม</string>
+    <string name="dPadSize">ขนาด D-Pad</string>
+    <string name="buttonSize">ขนาดปุ่ม</string>
+    <string name="dPadPosition">ตำแหน่ง D-Pad</string>
+    <string name="buttonPosition">ตำแหน่งปุ่ม</string>
+    <string name="dPadType">ประเภท D-Pad</string>
+    <string name="floating">ลอยตัว</string>
+    <string name="fixed">แก้ไขแล้ว</string>
+    <string name="configHardwareButtons">ปุ่มฮาร์ดแวร์</string>
+    <string name="playerName">ชื่อผู้เล่น</string>
+    <string name="settings">ตั้งค่า</string>
+    <string name="bomb">ระเบิด</string>
+    <string name="jump">กระโดด</string>
+    <string name="punch">ต่อย</string>
+    <string name="pickUp">หยิบขึ้นมา</string>
+    <string name="run1">วิ่ง 1</string>
+    <string name="run2">วิ่ง 2</string>
+    <string name="start">เริ่ม</string>
+    <string name="pressAnyKeyButton">กดปุ่มใดก็ได้...</string>
+    <string name="capturing">กำลังจับภาพ...</string>
+    <string name="resetToDefault">รีเซ็ตเป็นค่าเริ่มต้น</string>
+    <string name="enterAddress">ใส่ที่อยู่</string>
+    <string name="connect">เชื่อมต่อ</string>
+    <string name="cancel">ยกเลิก</string>
+    <string name="joinByAddress">เข้าร่วมตามที่อยู่…</string>
+    <string name="connected">เชื่อมต่อแล้ว</string>
+    <string name="connecting">กำลังเชื่อมต่อ...</string>
+    <string name="lag">ล่าช้า: ${SECONDS} วินาที</string>
+    <string name="cantResolveHost">ไม่สามารถแก้ไขโฮสต์</string>
+    <string name="disconnected">ตัดการเชื่อมต่อโดยเซิร์ฟเวอร์</string>
+    <string name="gameFull">เกมเต็มหรือไม่ยอมรับการเชื่อมต่อ</string>
+    <string name="versionMismatch">เวอร์ชั่นตรงกัน.\nตรวจสอบให้แน่ใจว่า BombSquad และ BombSquad Remote\nเป็นเวอร์ชันล่าสุดแล้วลองอีกครั้ง</string>
+    <string name="gameShutDown">เกมปิดตัวลงแล้ว</string>
+</resources>

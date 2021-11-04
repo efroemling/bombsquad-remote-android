@@ -1,18 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
     <string name="item_network_title">Traženje BombSquad igri...</string>
+    <string name="item_network_caption">Klikni na ime igre da joj se pridružiš.\nPobrinite se da ste na istoj wifi mreži kao i igra.</string>
+    <string name="dPadSize">Veličina D-Pada</string>
+    <string name="buttonSize">Veličina gumba</string>
+    <string name="dPadPosition">Pozicija D-Pada</string>
+    <string name="buttonPosition">Pozicija gumba</string>
+    <string name="dPadType">Tip D-Pada</string>
+    <string name="floating">lebdeće</string>
+    <string name="fixed">zaljepljeno</string>
+    <string name="configHardwareButtons">Gumbi hardvera</string>
     <string name="playerName">Ime Igrača</string>
     <string name="settings">Postavke</string>
     <string name="bomb">Bomba</string>
     <string name="jump">Skok</string>
     <string name="punch">Udarac</string>
     <string name="pickUp">Podigni</string>
+    <string name="run1">Trči 1</string>
+    <string name="run2">Trči 2</string>
     <string name="start">Počni</string>
     <string name="pressAnyKeyButton">Pririsni bilo koju tipku...</string>
+    <string name="capturing">Snimanje</string>
     <string name="resetToDefault">Resetirano na standardno</string>
     <string name="enterAddress">Ubaci Andresu</string>
     <string name="connect">Spoji se</string>
     <string name="cancel">Odustani</string>
+    <string name="joinByAddress">Uključi se adresom...</string>
+    <string name="connected">Povezano.</string>
     <string name="connecting">Povezujem se...</string>
+    <string name="lag">Zaostaje: ${SECONDS} sekundi</string>
+    <string name="cantResolveHost">Ne mogu pronaći hosta.</string>
+    <string name="disconnected">Veza prekinuta od servera.</string>
+    <string name="gameFull">Igra ima najviše mogućih igraća ili ne prihvaća veze.</string>
+    <string name="versionMismatch">Nejednake verzije.\nProvjerite da BombSquad i BombSquad Remote\nbudu ažurirani i pokušajte ponovo.</string>
     <string name="gameShutDown">Igra se ugasila.</string>
 </resources>
