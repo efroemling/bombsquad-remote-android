@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">Naghahanap ng mga laro sa BombSquad...</string>
+    <string name="item_network_caption">I-tap ang pangalan ng laro para sumali dito.\nTiyaking nasa parehong kang wifi network sa laro.</string>
+    <string name="dPadSize">Laki ng D-Pad</string>
+    <string name="buttonSize">Laki ng Pindutan</string>
+    <string name="dPadPosition">Posisyon ng D-Pad</string>
+    <string name="buttonPosition">Posisyon ng Pindutan</string>
+    <string name="dPadType">Uri ng D-Pad</string>
+    <string name="floating">lumulutang</string>
+    <string name="fixed">nakapirmi</string>
+    <string name="configHardwareButtons">Mga Pindutan ng Hardware</string>
+    <string name="playerName">Pangalan Ng Manlalaro</string>
+    <string name="settings">Mga Setting</string>
+    <string name="bomb">Bomba</string>
+    <string name="jump">Talon</string>
+    <string name="punch">Suntok</string>
+    <string name="pickUp">Pulutin</string>
+    <string name="run1">Takbo 1</string>
+    <string name="run2">Takbo 2</string>
+    <string name="start">Simulan</string>
+    <string name="pressAnyKeyButton">Pindutin ang anumang pindutan…</string>
+    <string name="capturing">Kumukuha…</string>
+    <string name="resetToDefault">I-reset sa default</string>
+    <string name="enterAddress">Maglagay ng Address</string>
+    <string name="connect">I-connect</string>
+    <string name="cancel">Kanselahin</string>
+    <string name="joinByAddress">Sumali sa pamamagitan ng Address...</string>
+    <string name="connected">Konektdo.</string>
+    <string name="connecting">Nagdudugtong….</string>
+    <string name="lag">Lag: ${SECONDS} na segundo</string>
+    <string name="cantResolveHost">Hindi malutas ang host.</string>
+    <string name="disconnected">Nadiskonekta ng server.</string>
+    <string name="gameFull">Ang laro ay puno na o hindi tumatanggap ng mga koneksyon.</string>
+    <string name="versionMismatch">Hindi tugma ang bersyon.\nTiyaking BombSquad at BombSquad Remote\nay ang mga pinakabagong bersyon at subukang muli.</string>
+    <string name="gameShutDown">Nagsara ang laro.</string>
+</resources>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad ரிமோட்</string>
+    <string name="app_name_short">BSரிமோட்</string>
+    <string name="item_network_title">BombSquad கேம்களைத் தேடுகிறது...</string>
+    <string name="item_network_caption">விளையாட்டில் சேர அதன் பெயரைத் தட்டவும்.\nவிளையாட்டின் அதே வைஃபை நெட்வொர்க்கில் நீங்கள் இருப்பதை உறுதிப்படுத்திக் கொள்ளுங்கள்.</string>
+    <string name="dPadSize">D-Pad அளவு</string>
+    <string name="buttonSize">பட்டன் அளவு</string>
+    <string name="dPadPosition">D-Pad நிலை</string>
+    <string name="buttonPosition">பட்டன் நிலை</string>
+    <string name="dPadType">D-Pad வகை</string>
+    <string name="floating">மிதக்கும்</string>
+    <string name="fixed">சரி செய்யப்பட்டது</string>
+    <string name="configHardwareButtons">வன்பொருள் பட்டன்கள்</string>
+    <string name="playerName">வீரரின் பெயர்</string>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="bomb">வெடிகுண்டு</string>
+    <string name="jump">குதி</string>
+    <string name="punch">குத்து</string>
+    <string name="pickUp">எடு</string>
+    <string name="run1">ரன் 1</string>
+    <string name="run2">ரன் 2</string>
+    <string name="start">தொடங்கு</string>
+    <string name="pressAnyKeyButton">எந்த பட்டனையும் அழுத்தவும்...</string>
+    <string name="capturing">பிடிக்கிறது...</string>
+    <string name="resetToDefault">இயல்புநிலைக்கு மீட்டமைக்கவும்</string>
+    <string name="enterAddress">ஒரு முகவரியை உள்ளிடவும்</string>
+    <string name="connect">இணை</string>
+    <string name="cancel">ரத்து</string>
+    <string name="joinByAddress">முகவரி மூலம் சேருங்கள்...</string>
+    <string name="connected">இணைக்கப்பட்டது.</string>
+    <string name="connecting">இணைக்கிறது...</string>
+    <string name="lag">பின்னடைவு: ${SECONDS} வினாடிகள்</string>
+    <string name="cantResolveHost">புரவலரைத் தீர்க்க முடியவில்லை.</string>
+    <string name="disconnected">சேவையகத்தால் துண்டிக்கப்பட்டது.</string>
+    <string name="gameFull">விளையாட்டு நிரம்பியுள்ளது அல்லது இணைப்புகளை ஏற்கவில்லை.</string>
+    <string name="versionMismatch">பதிப்பு பொருந்தவில்லை.\nBombSquad மற்றும் BombSquad ரிமோட்டை உறுதி செய்யவும்\nசமீபத்திய பதிப்புகள் மற்றும் மீண்டும் முயற்சிக்கவும்.</string>
+    <string name="gameShutDown">விளையாட்டு மூடப்பட்டது.</string>
+</resources>

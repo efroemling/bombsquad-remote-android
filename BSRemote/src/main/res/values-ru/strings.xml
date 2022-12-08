@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ДУ BombSquad</string>
-    <string name="app_name_short">ДУBS</string>
+    <string name="app_name">Пульт BombSquad</string>
+    <string name="app_name_short">Пульт BS</string>
     <string name="item_network_title">Ищем игры BombSquad...</string>
     <string name="item_network_caption">Нажмите на название игры для входа.\nУбедитесь, что вы находитесь в той же сети, что и игра.</string>
     <string name="dPadSize">Размер D-Pad</string>
