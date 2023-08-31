@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BombSquad Remote</string>
+    <string name="app_name_short">BSRemote</string>
+    <string name="item_network_title">Mencari permainan BombSquad...</string>
+    <string name="item_network_caption">Tekan pada nama permainan untuk sertainya.\nPastikan anda pada rangkaian Wi-Fi yang sama.</string>
+    <string name="dPadSize">Saiz D-Pad</string>
+    <string name="buttonSize">Saiz Butang</string>
+    <string name="dPadPosition">Kedudukan D-Pad</string>
+    <string name="buttonPosition">Kedudukan Butang</string>
+    <string name="dPadType">Jenis D-Pad</string>
+    <string name="floating">terapung</string>
+    <string name="fixed">tetap</string>
+    <string name="configHardwareButtons">Butang Perkakasan</string>
+    <string name="playerName">Nama Pemain</string>
+    <string name="settings">Tetapan</string>
+    <string name="bomb">Bom</string>
+    <string name="jump">Lompat</string>
+    <string name="punch">Lempeng</string>
+    <string name="pickUp">Angkat</string>
+    <string name="run1">Set 1</string>
+    <string name="run2">Set 2</string>
+    <string name="start">Mula</string>
+    <string name="pressAnyKeyButton">Tekan mana-mana butang...</string>
+    <string name="capturing">Menangkap...</string>
+    <string name="resetToDefault">Tetap semula ke lalai</string>
+    <string name="enterAddress">Masukkan Alamat</string>
+    <string name="connect">Sambung</string>
+    <string name="cancel">Batal</string>
+    <string name="joinByAddress">Sertai melalui Alamat</string>
+    <string name="connected">Disambung.</string>
+    <string name="connecting">Menyambung...</string>
+    <string name="lag">Kelambatan: ${SECONDS} saat</string>
+    <string name="cantResolveHost">Tidak dapat menentukan hos.</string>
+    <string name="disconnected">Putus sambungan oleh pelayan.</string>
+    <string name="gameFull">Permainan penuh atau tidak menerima.</string>
+    <string name="versionMismatch">Versi tidak sepadan.\nPastikan BombSquad dan BombSquad Remote\nadalah verisi terkini dan cuba lagi.</string>
+    <string name="gameShutDown">Permainan telah ditutup.</string>
+</resources>

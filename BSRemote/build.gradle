@@ -1,14 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
 
     defaultConfig {
         applicationId "net.froemling.bsremote"
         minSdkVersion 21
         targetSdkVersion 33
     }
-
     buildTypes {
         release {
             minifyEnabled true
@@ -20,6 +18,7 @@ android {
     lint {
         disable 'MissingTranslation'
     }
+    compileSdk 33
 }
 
 dependencies {
