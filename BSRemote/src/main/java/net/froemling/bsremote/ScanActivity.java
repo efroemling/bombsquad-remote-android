@@ -118,7 +118,7 @@ public class ScanActivity extends Activity {
         getSharedPreferences("BSRemotePrefs", Context.MODE_PRIVATE);
     String playerNameVal = preferences.getString("playerName", "");
     assert playerNameVal != null;
-    if (!playerNameVal.equals("")) {
+    if (!playerNameVal.isEmpty()) {
       playerName = playerNameVal;
     }
 
