@@ -31,7 +31,7 @@ public class LogThread extends Thread {
       if (e != null) {
         StringWriter sw = new StringWriter();
         e.printStackTrace(new PrintWriter(sw));
-        if (!s.equals("")) {
+        if (!s.isEmpty()) {
           s += "\n";
         }
         s += sw.toString();
